@@ -1,0 +1,42 @@
+[
+  {
+    "id": "vuln-research",
+    "code": "RS-01",
+    "title": "Vulnerability Research",
+    "focus": "Sababni topish",
+    "description": "Zaiflikni uni keltirib chiqaradigan kod yo'ligacha ajratish va lab sharoitida uni ishonchli qayta ishga tushiradigan shart-sharoitni tiklash.",
+    "articles": []
+  },
+  {
+    "id": "web-testing",
+    "code": "RS-02",
+    "title": "Web Security Testing",
+    "focus": "Ilova qatlami",
+    "description": "Access control, kiruvchi ma'lumot, autentifikatsiya va session oqimlari bo'yicha metodika — qo'lda test skaner strukturaviy topa olmaydigan narsalarni qanday topadi.",
+    "articles": []
+  },
+  {
+    "id": "exploit-analysis",
+    "code": "RS-03",
+    "title": "Exploit Analysis",
+    "focus": "Ochiq exploit tahlili",
+    "description": "Ommaviy proof-of-concept kodni ishga tushirishdan oldin o'qish: u aslida nima qiladi, nishondan nimani kutadi va qamrov doirasida uni qanday xavfsiz moslash mumkin.",
+    "articles": []
+  },
+  {
+    "id": "automation",
+    "code": "RS-04",
+    "title": "Security Automation",
+    "focus": "Python / Bash",
+    "description": "Engagement'dagi takrorlanuvchi qadamlarni — enumeration, parsing, dalil yig'ish, hisobot shabloni — qo'l mehnati o'rniga kichik va tekshiriladigan skriptlarga aylantirish.",
+    "articles": []
+  },
+  {
+    "id": "ai-security",
+    "code": "RS-05",
+    "title": "AI + Cybersecurity",
+    "focus": "Yordamchi tooling",
+    "description": "Model yordamidagi vositalar offensive ishni qayerda haqiqatan tezlashtiradi — triage, korrelyatsiya, hisobot qoralamasi — va qayerda topilma uchun baribir odam javob beradi.",
+    "articles": []
+  }
+]

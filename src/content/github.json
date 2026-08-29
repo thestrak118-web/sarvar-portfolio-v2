@@ -1,0 +1,37 @@
+{
+  "user": "thestrak118-web",
+  "repos": [
+    {
+      "name": "recontool",
+      "description": "Attack surface recon framework — host, service and content discovery, chained into one workflow.",
+      "language": "Go / Python",
+      "tag": "Security",
+      "url": "https://github.com/thestrak118-web/recontool",
+      "featured": true
+    },
+    {
+      "name": "nitro-control",
+      "description": "Universal Kali Linux laptop fan, RGB and system monitor daemon.",
+      "language": "Python",
+      "tag": "Systems",
+      "url": "https://github.com/thestrak118-web/nitro-control",
+      "featured": false
+    },
+    {
+      "name": "qaforge-academy",
+      "description": "Gamified QA learning platform.",
+      "language": "TypeScript",
+      "tag": "Product",
+      "url": "https://github.com/thestrak118-web/qaforge-academy",
+      "featured": false
+    },
+    {
+      "name": "epuvio",
+      "description": "PDF to EPUB converter and reader built on ocrmypdf.",
+      "language": "Python",
+      "tag": "Tooling",
+      "url": "https://github.com/thestrak118-web/epuvio",
+      "featured": false
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+[
+  {
+    "id": "pentesting",
+    "name": "Pentesting",
+    "code": "TOOLING",
+    "caption": "Kundalik toolchain — avtomatlashtirishdan oldin qo'lda ishlatiladi.",
+    "skills": [
+      "Burp Suite",
+      "Metasploit",
+      "Nmap",
+      "Gobuster",
+      "Hydra",
+      "John the Ripper",
+      "Netcat",
+      "LinPEAS",
+      "Wireshark",
+      "enum4linux"
+    ]
+  },
+  {
+    "id": "techniques",
+    "name": "Texnikalar",
+    "code": "TECHNIQUES",
+    "caption": "Amalda qo'llanilgan hujum va escalation usullari.",
+    "skills": [
+      "Web app security (SQLi, XSS, file upload bypass)",
+      "Privilege escalation (SUID, sudo, cron)",
+      "Reverse shells",
+      "Log poisoning",
+      "Vulnerability scanning",
+      "Active Directory fundamentals"
+    ]
+  },
+  {
+    "id": "frameworks",
+    "name": "Frameworklar",
+    "code": "FRAMEWORKS",
+    "caption": "Har bir assessment shu tuzilmalar asosida quriladi.",
+    "skills": [
+      "MITRE ATT&CK",
+      "OWASP Top 10",
+      "Cyber Kill Chain",
+      "Threat intelligence analysis",
+      "Pentest report writing"
+    ]
+  },
+  {
+    "id": "development",
+    "name": "Dasturlash",
+    "code": "CODE",
+    "caption": "Engagement bosqichlarini avtomatlashtirish.",
+    "skills": [
+      "Python",
+      "Bash",
+      "Automation scripting"
+    ]
+  },
+  {
+    "id": "platforms",
+    "name": "Platformalar",
+    "code": "PLATFORMS",
+    "caption": "Amaliy soatlar shu yerda yig'ilgan.",
+    "skills": [
+      "Kali Linux",
+      "HackTheBox",
+      "TryHackMe",
+      "VulNyx"
+    ]
+  }
+]

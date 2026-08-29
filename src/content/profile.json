@@ -1,0 +1,123 @@
+{
+  "name": "Sarvar Tolipov",
+  "shortName": "SARVAR.T",
+  "role": "Penetration Tester",
+  "discipline": "Cybersecurity",
+  "roleLine": "Penetration Tester / Cybersecurity",
+  "location": "Tashkent, Uzbekistan",
+  "photo": "/uploads/photo-2026-08-30-00-54-59-032a50.jpg",
+  "availability": "Kiberxavfsizlik bo'yicha takliflarga ochiqman",
+  "available": true,
+  "experience": "1+ yil",
+  "certification": "HTB CPTS · HAAD Red-0",
+  "machines": "20+",
+  "securityProjects": "5+",
+  "headlineLine1": "Xavfsizlik — bu funksiya emas.",
+  "headlineLine2": "Bu — attack surface.",
+  "intro": "Web ilovalar va tarmoq penetration testing, zaifliklarni tadqiq qilish va security automation bilan shug'ullanaman.",
+  "bio": [
+    "Men xavfsizlikning hujum tomonida ishlayman: attack surface'ni xaritaga tushiraman, tajovuzkor undan amalda nima qila olishini isbotlayman va tuzatish yo'li aniq bo'ladigan qilib hisobot yozaman. 1+ yil amaliy tajriba, HackTheBox, TryHackMe va VulNyx'da 20+ mashina.",
+    "Har bir engagement OWASP Top 10 va Cyber Kill Chain asosida tuzilib, professional pentest hisoboti bilan yakunlanadi: qayta takrorlash qadamlari, MITRE ATT&CK bog'lanishi, risk reytingi va remediation tavsiyalari. Amalda ekspluatatsiya qilingan sinflar orasida Memcached credential leakage, file upload bypass, Python module hijacking, LFI + log poisoning, KeePass cracking va GTFOBins SUID/sudo privilege escalation bor.",
+    "Ishning ikkinchi yarmi — muhandislik. Wordlist generatsiyasi, service fingerprinting va exploit zanjirini Python va Bash bilan avtomatlashtiraman; bu qo'lda enumeration vaqtini ~4 soatdan 90 daqiqadan kamgacha qisqartirdi."
+  ],
+  "spec": [
+    {
+      "key": "Lavozim",
+      "value": "Penetration Tester"
+    },
+    {
+      "key": "Yo'nalish",
+      "value": "Offensive Security"
+    },
+    {
+      "key": "Tajriba",
+      "value": "1+ yil"
+    },
+    {
+      "key": "Sertifikat",
+      "value": "HTB CPTS · HAAD Red-0"
+    },
+    {
+      "key": "Joylashuv",
+      "value": "Toshkent, UZ"
+    },
+    {
+      "key": "Platformalar",
+      "value": "HTB / TryHackMe / VulNyx"
+    },
+    {
+      "key": "Skripting",
+      "value": "Python / Bash"
+    },
+    {
+      "key": "Frameworklar",
+      "value": "MITRE ATT&CK · OWASP"
+    },
+    {
+      "key": "OS",
+      "value": "Kali Linux"
+    },
+    {
+      "key": "Tillar",
+      "value": "O'zbek · Ingliz"
+    }
+  ],
+  "heroMetrics": [
+    {
+      "value": "Ish tajribasi",
+      "label": "",
+      "hint": "",
+      "href": "/experience"
+    },
+    {
+      "value": "Skills",
+      "label": "",
+      "hint": "",
+      "href": "/skills"
+    },
+    {
+      "value": "Loyihalar",
+      "label": "",
+      "hint": "",
+      "href": "/work"
+    },
+    {
+      "value": "Sertifikat va yutuqlar",
+      "label": "",
+      "hint": "",
+      "href": "/certifications"
+    }
+  ],
+  "statistics": [
+    {
+      "value": 20,
+      "suffix": "+",
+      "label": "Mashina va lab",
+      "detail": "HTB · TryHackMe · VulNyx"
+    },
+    {
+      "value": 6,
+      "suffix": "",
+      "label": "Zaiflik sinfi ekspluatatsiya qilingan",
+      "detail": "web · privesc · credential"
+    },
+    {
+      "value": 1,
+      "suffix": "+",
+      "label": "Yil amaliy tajriba",
+      "detail": "Penetration testing"
+    },
+    {
+      "value": 2,
+      "suffix": "",
+      "label": "Sertifikat",
+      "detail": "CPTS · HAAD Red-0"
+    },
+    {
+      "value": 3,
+      "suffix": "",
+      "label": "Sertifikat jarayonda",
+      "detail": "SWES · CDSA · Security+"
+    }
+  ]
+}

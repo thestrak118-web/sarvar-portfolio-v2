@@ -1,0 +1,58 @@
+{
+  "sections": [
+    {
+      "id": "work",
+      "label": "Security Work — loyihalar",
+      "place": "page",
+      "nav": "Work"
+    },
+    {
+      "id": "experience",
+      "label": "Experience — ish tajribasi",
+      "place": "page",
+      "nav": "Experience"
+    },
+    {
+      "id": "skills",
+      "label": "Skills — ko'nikmalar xaritasi",
+      "place": "page",
+      "nav": "Skills"
+    },
+    {
+      "id": "certifications",
+      "label": "Certifications — sertifikatlar",
+      "place": "page",
+      "nav": "Certifications"
+    },
+    {
+      "id": "statistics",
+      "label": "Statistics — raqamlar",
+      "place": "off",
+      "nav": ""
+    },
+    {
+      "id": "about",
+      "label": "About — Behind the attacks",
+      "place": "page",
+      "nav": "About"
+    },
+    {
+      "id": "research",
+      "label": "Research — tadqiqot",
+      "place": "off",
+      "nav": "Research"
+    },
+    {
+      "id": "social",
+      "label": "Presence — GitHub / LinkedIn",
+      "place": "off",
+      "nav": "Presence"
+    },
+    {
+      "id": "contact",
+      "label": "Contact — bog'lanish",
+      "place": "off",
+      "nav": "Contact"
+    }
+  ]
+}

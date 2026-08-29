@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# admin panel content backups
+src/content/.backups/
+
+# yuklangan rasmlar zaxirasi
+src/content/.backups/

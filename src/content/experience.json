@@ -1,0 +1,61 @@
+{
+  "note": "Barcha ishlar mustaqil tadqiqot va o'quv muhitlarida bajarilgan; har bir engagement professional pentest hisoboti bilan yakunlangan.",
+  "engagements": [
+    {
+      "organisation": "Mustaqil xavfsizlik tadqiqoti (Self-Directed Security Research)",
+      "organisationPending": false,
+      "role": "Independent Penetration Testing",
+      "period": "2024 — hozirgacha",
+      "periodPending": false,
+      "mode": "1+ yil amaliy tajriba",
+      "confidential": false,
+      "summary": "HackTheBox, TryHackMe va VulNyx platformalarida 20+ mashinada to'liq qamrovli penetration test. Har bir engagement threat intelligence konteksti, MITRE ATT&CK bog'lanishi, risk baholash va remediation tavsiyalari bilan professional hisobotga aylantirilgan.",
+      "areas": [
+        {
+          "title": "To'liq qamrovli penetration test",
+          "detail": "20+ CTF mashinasida Nmap, Burp Suite, Metasploit, Gobuster, Hydra va LinPEAS bilan boshdan oxirigacha test; har bir engagement uchun alohida professional hisobot."
+        },
+        {
+          "title": "Ekspluatatsiya qilingan zaiflik sinflari",
+          "detail": "Memcached credential leakage, file upload bypass, Python module hijacking, LFI + log poisoning, KeePass database cracking va GTFOBins SUID/sudo privilege escalation — jami 6 xil sinf."
+        },
+        {
+          "title": "Avtomatlashtirish (Python / Bash)",
+          "detail": "Wordlist generatsiyasi, service fingerprinting va exploit zanjirini avtomatlashtiruvchi skriptlar — qo'lda enumeration vaqtini ~4 soatdan 90 daqiqagacha qisqartirdi."
+        },
+        {
+          "title": "Metodika va hisobot",
+          "detail": "Har bir assessment OWASP Top 10 va Cyber Kill Chain asosida tuzilgan; hujumchi TTP'lari MITRE ATT&CK texnikalariga bog'lanib, hisobot real threat actor konteksti va risk reytingi bilan boyitilgan."
+        }
+      ]
+    },
+    {
+      "organisation": "HAAD Training Center",
+      "organisationPending": false,
+      "role": "Cybersecurity Professional Program",
+      "period": "Noyabr 2025 — Iyun 2026",
+      "periodPending": false,
+      "mode": "Ta'lim dasturi",
+      "confidential": false,
+      "summary": "Tarmoq xavfsizligi, penetration testing, web ilova xavfsizligi, SIEM, Active Directory va incident response yo'nalishlari bo'yicha amaliy dastur.",
+      "areas": [
+        {
+          "title": "Tarmoq va host xavfsizligi",
+          "detail": "Tarmoq xavfsizligi asoslari, Active Directory muhitini tekshirish va hostlarni qattiqlashtirsh."
+        },
+        {
+          "title": "Web ilova xavfsizligi",
+          "detail": "Web ilovalardagi asosiy zaiflik sinflari va ularni qo'lda tekshirish metodikasi."
+        },
+        {
+          "title": "SIEM va incident response",
+          "detail": "Hodisalarni aniqlash, tahlil qilish va javob berish jarayonlari."
+        },
+        {
+          "title": "Skripting",
+          "detail": "Python va Bash yordamida xavfsizlik vazifalarini avtomatlashtirish."
+        }
+      ]
+    }
+  ]
+}

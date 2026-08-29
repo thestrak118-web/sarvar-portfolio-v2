@@ -1,0 +1,56 @@
+{
+  "earned": [
+    {
+      "name": "HTB Certified Penetration Testing Specialist",
+      "abbr": "CPTS",
+      "issuer": "Hack The Box",
+      "earned": "27 August 2026",
+      "credentialId": "",
+      "verifyUrl": "",
+      "summary": "Professional darajadagi, to'liq amaliy sertifikat: ko'p hostli korporativ muhitda boshidan oxirigacha o'tkazilgan penetration test va kommersiya darajasidagi hisobot.",
+      "domains": [
+        "Enumeration",
+        "Web & Network Exploitation",
+        "Active Directory",
+        "Lateral Movement",
+        "Privilege Escalation",
+        "Commercial Reporting"
+      ]
+    },
+    {
+      "name": "HAAD Red-0 — Fundamentals of Penetration Testing",
+      "abbr": "Red-0",
+      "issuer": "HAAD Training Center",
+      "earned": "",
+      "credentialId": "",
+      "verifyUrl": "",
+      "summary": "Penetration testing asoslari bo'yicha amaliy dastur: recon, enumeration, ekspluatatsiya va hisobot yozish.",
+      "domains": [
+        "Reconnaissance",
+        "Enumeration",
+        "Exploitation",
+        "Reporting"
+      ]
+    }
+  ],
+  "roadmap": [
+    {
+      "abbr": "SWES",
+      "name": "HTB Web Exploitation Specialist — kurs 100% tugagan, imtihon kutilmoqda",
+      "issuer": "Hack The Box",
+      "pursuing": true
+    },
+    {
+      "abbr": "CDSA",
+      "name": "HTB Certified Defensive Security Analyst — 35%",
+      "issuer": "Hack The Box",
+      "pursuing": true
+    },
+    {
+      "abbr": "Security+",
+      "name": "CompTIA Security+ — jarayonda",
+      "issuer": "CompTIA",
+      "pursuing": true
+    }
+  ]
+}

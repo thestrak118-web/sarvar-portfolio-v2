@@ -1,0 +1,325 @@
+{
+  "note": "Har bir engagement professional pentest hisoboti bilan hujjatlashtirilgan. Quyidagi case study'lar bosqichma-bosqich to'ldirilib boriladi.",
+  "items": [
+    {
+      "slug": "htb-thm-vulnyx-assessments",
+      "index": "01",
+      "title": "20+ mashina bo'yicha penetration test",
+      "codename": "",
+      "category": "CTF / lab engagement",
+      "targetType": "HackTheBox · TryHackMe · VulNyx",
+      "summary": "HackTheBox, TryHackMe va VulNyx platformalarida 20+ mashinada to'liq qamrovli penetration test. Har bir engagement Nmap, Burp Suite, Metasploit, Gobuster, Hydra va LinPEAS bilan bajarilib, MITRE ATT&CK bog'lanishi va remediation tavsiyalari bo'lgan professional hisobot bilan yakunlangan.",
+      "cover": "",
+      "tags": [
+        "WEB",
+        "NETWORK",
+        "LINUX",
+        "PRIVESC",
+        "EXPLOITATION",
+        "REPORTING"
+      ],
+      "severity": "unrated",
+      "cvss": "",
+      "cwe": "",
+      "status": "Chop etilgan",
+      "difficulty": "",
+      "tools": [
+        "Nmap",
+        "Burp Suite",
+        "Metasploit",
+        "Gobuster",
+        "Hydra",
+        "LinPEAS",
+        "John the Ripper",
+        "Netcat"
+      ],
+      "mitre": [],
+      "vulnerabilities": [
+        "Memcached credential leakage",
+        "File upload bypass",
+        "Python module hijacking",
+        "LFI + log poisoning",
+        "KeePass database cracking",
+        "GTFOBins SUID/sudo privilege escalation"
+      ],
+      "chapters": [
+        {
+          "no": "01",
+          "title": "Target",
+          "objective": "Qamrovni aniqlash va muhitning dastlabki manzarasi: ochiq hostlar, mo'ljallangan foydalanuvchi rollari va muvaffaqiyatli compromise nimani anglatishi.",
+          "content": "",
+          "points": []
+        },
+        {
+          "no": "02",
+          "title": "Reconnaissance",
+          "objective": "Host discovery, port va service aniqlash, versiya fingerprinting hamda nishon ixtiyoriy oshkor qiladigan ma'lumotni yig'ish.",
+          "content": "",
+          "points": []
+        },
+        {
+          "no": "03",
+          "title": "Enumeration",
+          "objective": "Har bir ochiq service'ni chuqur tekshirish: kataloglar, parametrlar, autentifikatsiya nuqtalari, default material va noto'g'ri sozlashlar.",
+          "content": "",
+          "points": []
+        },
+        {
+          "no": "04",
+          "title": "Initial Access",
+          "objective": "Birinchi tasdiqlangan foothold — qayta takrorlanadigan bitta yo'l, qo'lda sinalgan va tasdiqlangan.",
+          "content": "",
+          "points": []
+        },
+        {
+          "no": "05",
+          "title": "Exploitation",
+          "objective": "Ta'sirni ko'rsatuvchi boshqariladigan proof-of-concept: aniq so'rov, payload va shartlar yozib boriladi.",
+          "content": "",
+          "points": []
+        },
+        {
+          "no": "06",
+          "title": "Privilege Escalation",
+          "objective": "Lokal foydalanuvchilar, ruxsatlar, cron, SUID va service akkauntlarini tekshirib to'liq nazoratga chiqish.",
+          "content": "",
+          "points": []
+        },
+        {
+          "no": "07",
+          "title": "Impact",
+          "objective": "Compromise tajovuzkor uchun nimani anglatadi: ma'lumot, lateral movement, persistence va biznes oqibati.",
+          "content": "",
+          "points": []
+        },
+        {
+          "no": "08",
+          "title": "Remediation",
+          "objective": "Sababni yo'q qiluvchi tuzatishlar, defence-in-depth va mudofaa jamoasi uchun detection imkoniyatlari.",
+          "content": "",
+          "points": []
+        }
+      ],
+      "screenshots": [
+        {
+          "caption": "Recon — service discovery",
+          "src": ""
+        },
+        {
+          "caption": "Initial access — ijro dalili",
+          "src": ""
+        },
+        {
+          "caption": "Privilege escalation — root dalili",
+          "src": ""
+        }
+      ],
+      "reportUrl": "",
+      "githubUrl": ""
+    },
+    {
+      "slug": "security-automation-scripts",
+      "index": "02",
+      "title": "Engagement avtomatlashtirish skriptlari",
+      "codename": "",
+      "category": "Security tooling",
+      "targetType": "Python · Bash",
+      "summary": "Wordlist generatsiyasi, service fingerprinting va exploit zanjirini avtomatlashtiruvchi o'z skriptlarim. Natijada qo'lda enumeration vaqti ~4 soatdan 90 daqiqadan kamgacha qisqardi.",
+      "cover": "",
+      "tags": [
+        "RECON",
+        "AUTOMATION",
+        "PYTHON",
+        "BASH"
+      ],
+      "severity": "unrated",
+      "cvss": "",
+      "cwe": "",
+      "status": "Chop etilgan",
+      "difficulty": "",
+      "tools": [
+        "Python",
+        "Bash",
+        "Nmap",
+        "ffuf"
+      ],
+      "mitre": [],
+      "vulnerabilities": [],
+      "chapters": [
+        {
+          "no": "01",
+          "title": "Target",
+          "objective": "Qamrovni aniqlash va muhitning dastlabki manzarasi: ochiq hostlar, mo'ljallangan foydalanuvchi rollari va muvaffaqiyatli compromise nimani anglatishi.",
+          "content": "",
+          "points": []
+        },
+        {
+          "no": "02",
+          "title": "Reconnaissance",
+          "objective": "Host discovery, port va service aniqlash, versiya fingerprinting hamda nishon ixtiyoriy oshkor qiladigan ma'lumotni yig'ish.",
+          "content": "",
+          "points": []
+        },
+        {
+          "no": "03",
+          "title": "Enumeration",
+          "objective": "Har bir ochiq service'ni chuqur tekshirish: kataloglar, parametrlar, autentifikatsiya nuqtalari, default material va noto'g'ri sozlashlar.",
+          "content": "",
+          "points": []
+        },
+        {
+          "no": "04",
+          "title": "Initial Access",
+          "objective": "Birinchi tasdiqlangan foothold — qayta takrorlanadigan bitta yo'l, qo'lda sinalgan va tasdiqlangan.",
+          "content": "",
+          "points": []
+        },
+        {
+          "no": "05",
+          "title": "Exploitation",
+          "objective": "Ta'sirni ko'rsatuvchi boshqariladigan proof-of-concept: aniq so'rov, payload va shartlar yozib boriladi.",
+          "content": "",
+          "points": []
+        },
+        {
+          "no": "06",
+          "title": "Privilege Escalation",
+          "objective": "Lokal foydalanuvchilar, ruxsatlar, cron, SUID va service akkauntlarini tekshirib to'liq nazoratga chiqish.",
+          "content": "",
+          "points": []
+        },
+        {
+          "no": "07",
+          "title": "Impact",
+          "objective": "Compromise tajovuzkor uchun nimani anglatadi: ma'lumot, lateral movement, persistence va biznes oqibati.",
+          "content": "",
+          "points": []
+        },
+        {
+          "no": "08",
+          "title": "Remediation",
+          "objective": "Sababni yo'q qiluvchi tuzatishlar, defence-in-depth va mudofaa jamoasi uchun detection imkoniyatlari.",
+          "content": "",
+          "points": []
+        }
+      ],
+      "screenshots": [
+        {
+          "caption": "Recon — service discovery",
+          "src": ""
+        },
+        {
+          "caption": "Initial access — ijro dalili",
+          "src": ""
+        },
+        {
+          "caption": "Privilege escalation — root dalili",
+          "src": ""
+        }
+      ],
+      "reportUrl": "",
+      "githubUrl": "https://github.com/thestrak118-web/recontool"
+    },
+    {
+      "slug": "threat-intelligence-reporting",
+      "index": "03",
+      "title": "Threat intelligence va hisobot",
+      "codename": "",
+      "category": "Reporting",
+      "targetType": "MITRE ATT&CK · OWASP Top 10 · Cyber Kill Chain",
+      "summary": "Har bir engagement uchun hujumchi TTP'larini MITRE ATT&CK texnikalariga bog'lash, risk reytingini belgilash va hisobotni real threat actor konteksti bilan boyitish. Tuzilma OWASP Top 10 va Cyber Kill Chain asosida.",
+      "cover": "",
+      "tags": [
+        "REPORTING",
+        "MITRE",
+        "OWASP"
+      ],
+      "severity": "unrated",
+      "cvss": "",
+      "cwe": "",
+      "status": "Chop etilgan",
+      "difficulty": "",
+      "tools": [
+        "MITRE ATT&CK",
+        "OWASP Top 10",
+        "Cyber Kill Chain"
+      ],
+      "mitre": [],
+      "vulnerabilities": [],
+      "chapters": [
+        {
+          "no": "01",
+          "title": "Target",
+          "objective": "Qamrovni aniqlash va muhitning dastlabki manzarasi: ochiq hostlar, mo'ljallangan foydalanuvchi rollari va muvaffaqiyatli compromise nimani anglatishi.",
+          "content": "",
+          "points": []
+        },
+        {
+          "no": "02",
+          "title": "Reconnaissance",
+          "objective": "Host discovery, port va service aniqlash, versiya fingerprinting hamda nishon ixtiyoriy oshkor qiladigan ma'lumotni yig'ish.",
+          "content": "",
+          "points": []
+        },
+        {
+          "no": "03",
+          "title": "Enumeration",
+          "objective": "Har bir ochiq service'ni chuqur tekshirish: kataloglar, parametrlar, autentifikatsiya nuqtalari, default material va noto'g'ri sozlashlar.",
+          "content": "",
+          "points": []
+        },
+        {
+          "no": "04",
+          "title": "Initial Access",
+          "objective": "Birinchi tasdiqlangan foothold — qayta takrorlanadigan bitta yo'l, qo'lda sinalgan va tasdiqlangan.",
+          "content": "",
+          "points": []
+        },
+        {
+          "no": "05",
+          "title": "Exploitation",
+          "objective": "Ta'sirni ko'rsatuvchi boshqariladigan proof-of-concept: aniq so'rov, payload va shartlar yozib boriladi.",
+          "content": "",
+          "points": []
+        },
+        {
+          "no": "06",
+          "title": "Privilege Escalation",
+          "objective": "Lokal foydalanuvchilar, ruxsatlar, cron, SUID va service akkauntlarini tekshirib to'liq nazoratga chiqish.",
+          "content": "",
+          "points": []
+        },
+        {
+          "no": "07",
+          "title": "Impact",
+          "objective": "Compromise tajovuzkor uchun nimani anglatadi: ma'lumot, lateral movement, persistence va biznes oqibati.",
+          "content": "",
+          "points": []
+        },
+        {
+          "no": "08",
+          "title": "Remediation",
+          "objective": "Sababni yo'q qiluvchi tuzatishlar, defence-in-depth va mudofaa jamoasi uchun detection imkoniyatlari.",
+          "content": "",
+          "points": []
+        }
+      ],
+      "screenshots": [
+        {
+          "caption": "Recon — service discovery",
+          "src": ""
+        },
+        {
+          "caption": "Initial access — ijro dalili",
+          "src": ""
+        },
+        {
+          "caption": "Privilege escalation — root dalili",
+          "src": ""
+        }
+      ],
+      "reportUrl": "",
+      "githubUrl": ""
+    }
+  ]
+}
