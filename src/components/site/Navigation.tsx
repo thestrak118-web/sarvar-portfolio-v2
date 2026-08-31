@@ -17,6 +17,8 @@ const links = navLinks;
 export function Navigation() {
   const pathname = usePathname();
   const standalone = pathname !== "/";
+  /** Bosh sahifada havolalar hero katakchalarida — menyuda takrorlanmaydi. */
+  const showLinks = standalone;
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
@@ -90,6 +92,7 @@ export function Navigation() {
             {profile.shortName}
           </Link>
 
+          {showLinks ? (
           <ul className="hidden items-center gap-1 md:flex">
             {links.map((link) => (
               <li key={link.id}>
@@ -115,6 +118,7 @@ export function Navigation() {
               </li>
             ))}
           </ul>
+          ) : null}
 
           <div className="flex items-center gap-2">
             <div className="hidden items-center gap-2 sm:flex">
@@ -125,6 +129,7 @@ export function Navigation() {
                 <LinkedInIcon />
               </IconAction>
             </div>
+            {showLinks ? (
             <button
               ref={toggleRef}
               type="button"
@@ -136,6 +141,7 @@ export function Navigation() {
             >
               {open ? <CloseIcon /> : <MenuIcon />}
             </button>
+            ) : null}
           </div>
         </nav>
       </header>
