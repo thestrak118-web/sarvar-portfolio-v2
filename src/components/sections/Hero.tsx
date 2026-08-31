@@ -37,9 +37,11 @@ export function Hero() {
 
       <div className="relative mx-auto w-full max-w-[1240px] px-5 sm:px-8">
         {/* 3D yadro konteynerga bog'langan: keng ekranda ham matndan uzoqlashmaydi */}
-        <HeroVisual className="pointer-events-none absolute right-[-6%] top-1/2 -z-10 hidden h-[680px] w-[680px] -translate-y-1/2 mask-radial md:block lg:right-[-2%] xl:right-0" />
+        {/* matn qatori: 3D shar shu blokning markaziga tenglashadi */}
+        <div className="relative">
+          <HeroVisual className="pointer-events-none absolute right-[-6%] top-1/2 -z-10 hidden h-[620px] w-[620px] -translate-y-1/2 mask-radial md:block lg:right-[-2%] xl:right-0" />
 
-        <div className="max-w-[760px]">
+          <div className="max-w-[760px]">
           <motion.div {...rise(0.05)} className="flex flex-wrap items-center gap-4">
             <span className="inline-flex items-center gap-2.5 rounded-full border border-acid/25 bg-acid/[0.06] py-1.5 pl-2.5 pr-3.5">
               <span className="relative flex size-1.5">
@@ -106,6 +108,7 @@ export function Hero() {
               />
             </Magnetic>
           </motion.div>
+          </div>
         </div>
 
         {/* ── metrics rail ─────────────────────────────────────── */}
