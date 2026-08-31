@@ -19,20 +19,20 @@
       "image": "/uploads/cpts-certificate.webp"
     },
     {
-      "name": "HAAD Red-0 — Fundamentals of Penetration Testing",
+      "name": "Red-0: Fundamentals of Penetration Testing",
       "abbr": "Red-0",
-      "issuer": "HAAD Training Center",
-      "earned": "",
-      "credentialId": "",
+      "issuer": "HAAD Learning Center",
+      "earned": "5 May 2026",
+      "credentialId": "HID: 866912I136",
       "verifyUrl": "",
-      "summary": "Penetration testing asoslari bo'yicha amaliy dastur: recon, enumeration, ekspluatatsiya va hisobot yozish.",
+      "summary": "Penetration testing asoslari bo'yicha amaliy kurs: recon, enumeration, tarmoq xavfsizligi va ethical hacking tamoyillari.",
       "domains": [
         "Reconnaissance",
         "Enumeration",
         "Exploitation",
         "Reporting"
       ],
-      "image": ""
+      "image": "/uploads/red0-certificate.webp"
     }
   ],
   "roadmap": [

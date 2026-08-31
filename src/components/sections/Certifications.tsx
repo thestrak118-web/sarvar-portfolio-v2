@@ -82,7 +82,7 @@ export function Certifications({ index = "" }: { index?: string }) {
                       <span className="label">{row.issuer}</span>
                       {row.credentialId ? (
                         <span className="font-mono text-[11px] text-dim">
-                          ID: {row.credentialId}
+                          {row.credentialId}
                         </span>
                       ) : null}
                       {row.verifyUrl ? (
