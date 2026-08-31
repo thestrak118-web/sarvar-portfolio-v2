@@ -33,10 +33,12 @@ export function Hero() {
         <div className="absolute bottom-[-10%] left-[-8%] h-[420px] w-[560px] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(195,255,62,0.05),transparent_70%)]" />
       </div>
 
-      <HeroVisual className="pointer-events-none absolute right-[-18%] top-1/2 -z-10 hidden h-[760px] w-[760px] -translate-y-[54%] mask-radial md:block lg:right-[-8%] xl:right-[-2%]" />
       <HeroVisual className="pointer-events-none absolute left-1/2 top-[44%] -z-10 h-[440px] w-[440px] -translate-x-1/2 -translate-y-1/2 opacity-30 mask-radial md:hidden" />
 
-      <div className="mx-auto w-full max-w-[1240px] px-5 sm:px-8">
+      <div className="relative mx-auto w-full max-w-[1240px] px-5 sm:px-8">
+        {/* 3D yadro konteynerga bog'langan: keng ekranda ham matndan uzoqlashmaydi */}
+        <HeroVisual className="pointer-events-none absolute right-[-6%] top-1/2 -z-10 hidden h-[680px] w-[680px] -translate-y-1/2 mask-radial md:block lg:right-[-2%] xl:right-0" />
+
         <div className="max-w-[760px]">
           <motion.div {...rise(0.05)} className="flex flex-wrap items-center gap-4">
             <span className="inline-flex items-center gap-2.5 rounded-full border border-acid/25 bg-acid/[0.06] py-1.5 pl-2.5 pr-3.5">
