@@ -10,6 +10,8 @@ export type Certification = {
   /** Only rendered when explicitly set — never inferred. */
   credentialId: string;
   verifyUrl: string;
+  /** Sertifikat rasmi. Bo'sh bo'lsa ko'rsatilmaydi. */
+  image: string;
   summary: string;
   domains: string[];
 };

@@ -2,6 +2,7 @@ import { certifications, certificationRoadmap } from "@/data/certifications";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import { EmptyState } from "@/components/ui/EmptyState";
+import Image from "next/image";
 import { ArrowUpRightIcon } from "@/components/ui/Icons";
 
 type Row = {
@@ -12,19 +13,8 @@ type Row = {
   credentialId: string;
   verifyUrl: string;
   domains: string[];
+  image: string;
   status: "earned" | "pursuing" | "planned";
-};
-
-const statusLabel: Record<Row["status"], string> = {
-  earned: "Olingan",
-  pursuing: "Hozir tayyorlanmoqda",
-  planned: "Rejada",
-};
-
-const statusClass: Record<Row["status"], string> = {
-  earned: "text-acid",
-  pursuing: "text-acid/70",
-  planned: "text-dim",
 };
 
 export function Certifications({ index = "" }: { index?: string }) {
@@ -38,6 +28,7 @@ export function Certifications({ index = "" }: { index?: string }) {
       credentialId: "",
       verifyUrl: "",
       domains: [] as string[],
+      image: "",
       status: (cert.pursuing ? "pursuing" : "planned") as Row["status"],
     })),
   ];
@@ -114,11 +105,24 @@ export function Certifications({ index = "" }: { index?: string }) {
                     ) : null}
                   </div>
 
-                  <span
-                    className={`label shrink-0 ${statusClass[row.status]}`}
-                  >
-                    {statusLabel[row.status]}
-                  </span>
+                  {row.image ? (
+                    <a
+                      href={row.image}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="shrink-0 overflow-hidden rounded-lg border border-line transition-colors duration-300 hover:border-acid/50"
+                      aria-label={`${row.abbr} sertifikati — to'liq ko'rish`}
+                    >
+                      <Image
+                        src={row.image}
+                        alt={`${row.abbr} sertifikati`}
+                        width={734}
+                        height={522}
+                        sizes="220px"
+                        className="h-[124px] w-[176px] object-cover"
+                      />
+                    </a>
+                  ) : null}
                 </div>
               </article>
             </Reveal>

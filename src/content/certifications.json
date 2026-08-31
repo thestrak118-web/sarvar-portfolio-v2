@@ -15,7 +15,8 @@
         "Lateral Movement",
         "Privilege Escalation",
         "Commercial Reporting"
-      ]
+      ],
+      "image": "/uploads/cpts-certificate.webp"
     },
     {
       "name": "HAAD Red-0 — Fundamentals of Penetration Testing",
@@ -30,7 +31,8 @@
         "Enumeration",
         "Exploitation",
         "Reporting"
-      ]
+      ],
+      "image": ""
     }
   ],
   "roadmap": [
