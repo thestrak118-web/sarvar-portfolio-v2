@@ -14,8 +14,11 @@ export type ExternalLink = {
   handle: string;
 };
 
+export type IntroPart = { text: string; accent: boolean };
+
 export const profile = {
   ...raw,
+  introParts: raw.introParts as IntroPart[],
   headline: [raw.headlineLine1, raw.headlineLine2] as [string, string],
   links: {
     github: { label: "GitHub", href: links.github, handle: "" } as ExternalLink,

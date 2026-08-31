@@ -14,7 +14,7 @@
   "securityProjects": "5+",
   "headlineLine1": "Xavfsizlik — bu funksiya emas.",
   "headlineLine2": "Bu — attack surface.",
-  "intro": "Web ilovalar va tarmoq penetration testing, zaifliklarni tadqiq qilish va security automation bilan shug'ullanaman.",
+  "intro": "Web application & network penetration testing, vulnerability research va security automation bilan shug'ullanaman.",
   "bio": [
     "Men xavfsizlikning hujum tomonida ishlayman: attack surface'ni xaritaga tushiraman, tajovuzkor undan amalda nima qila olishini isbotlayman va tuzatish yo'li aniq bo'ladigan qilib hisobot yozaman. 1+ yil amaliy tajriba, HackTheBox, TryHackMe va VulNyx'da 20+ mashina.",
     "Har bir engagement OWASP Top 10 va Cyber Kill Chain asosida tuzilib, professional pentest hisoboti bilan yakunlanadi: qayta takrorlash qadamlari, MITRE ATT&CK bog'lanishi, risk reytingi va remediation tavsiyalari. Amalda ekspluatatsiya qilingan sinflar orasida Memcached credential leakage, file upload bypass, Python module hijacking, LFI + log poisoning, KeePass cracking va GTFOBins SUID/sudo privilege escalation bor.",
@@ -118,6 +118,31 @@
       "suffix": "",
       "label": "Sertifikat jarayonda",
       "detail": "SWES · CDSA · Security+"
+    }
+  ],
+  "nameLine1": "SARVAR",
+  "nameLine2": "TOLIPOV",
+  "pill": "Penetration Tester / Cybersecurity",
+  "introParts": [
+    {
+      "text": "Web application & network ",
+      "accent": false
+    },
+    {
+      "text": "penetration testing",
+      "accent": true
+    },
+    {
+      "text": ", ",
+      "accent": false
+    },
+    {
+      "text": "vulnerability research",
+      "accent": true
+    },
+    {
+      "text": " va security automation bilan shug'ullanaman.",
+      "accent": false
     }
   ]
 }

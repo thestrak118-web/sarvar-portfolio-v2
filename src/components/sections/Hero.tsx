@@ -47,28 +47,40 @@ export function Hero() {
                 <span className="relative inline-flex size-1.5 rounded-full bg-acid" />
               </span>
               <span className="font-mono text-[10.5px] uppercase leading-none tracking-[0.18em] text-acid">
-                {profile.availability}
+                {profile.pill}
               </span>
             </span>
-            <span className="label hidden sm:inline">
-              {profile.name} — {profile.roleLine} · {profile.location}
-            </span>
+            <span className="label hidden sm:inline">{profile.location}</span>
           </motion.div>
 
-          <h1 className="mt-8 text-[clamp(2.6rem,7.4vw,5.6rem)] font-semibold leading-[0.98] tracking-[-0.045em]">
+          <h1 className="mt-8 text-[clamp(3rem,8vw,6rem)] font-extrabold uppercase leading-[0.9] tracking-[-0.035em]">
             <motion.span {...rise(0.12)} className="block text-fg">
-              {profile.headline[0]}
+              {profile.nameLine1}
             </motion.span>
-            <motion.span {...rise(0.2)} className="block text-muted/75">
-              {profile.headline[1]}
+            <motion.span {...rise(0.18)} className="block text-acid">
+              {profile.nameLine2}
             </motion.span>
           </h1>
 
+          {/* qisqa ajratgich */}
+          <motion.div {...rise(0.24)} className="mt-7 flex items-center gap-2" aria-hidden>
+            <span className="h-0.5 w-10 bg-acid" />
+            <span className="h-0.5 w-6 bg-line" />
+          </motion.div>
+
           <motion.p
             {...rise(0.3)}
-            className="mt-7 max-w-[540px] text-[15.5px] leading-relaxed text-muted"
+            className="mt-6 max-w-[560px] font-mono text-[14.5px] leading-[1.75] text-muted"
           >
-            {profile.intro}
+            {profile.introParts.map((part, i) =>
+              part.accent ? (
+                <span key={i} className="text-acid">
+                  {part.text}
+                </span>
+              ) : (
+                <span key={i}>{part.text}</span>
+              ),
+            )}
           </motion.p>
 
           <motion.div {...rise(0.38)} className="mt-10 flex flex-wrap items-center gap-3">
