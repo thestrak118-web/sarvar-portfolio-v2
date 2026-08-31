@@ -1,7 +1,6 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { SocialProof } from "@/components/sections/SocialProof";
-import { PageNav } from "@/components/site/PageNav";
 import { placeOf } from "@/data/layout";
 import { profile } from "@/data/profile";
 
@@ -18,7 +17,6 @@ export default function SocialProofPage() {
     <>
       <div className="pt-16" />
       <SocialProof index="" />
-      <PageNav current="social" />
     </>
   );
 }

@@ -1,7 +1,6 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { About } from "@/components/sections/About";
-import { PageNav } from "@/components/site/PageNav";
 import { placeOf } from "@/data/layout";
 import { profile } from "@/data/profile";
 
@@ -18,7 +17,6 @@ export default function AboutPage() {
     <>
       <div className="pt-16" />
       <About index="" />
-      <PageNav current="about" />
     </>
   );
 }

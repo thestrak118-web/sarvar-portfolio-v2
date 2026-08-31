@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { SecurityWork } from "@/components/sections/SecurityWork";
-import { PageNav } from "@/components/site/PageNav";
 
 export const metadata: Metadata = {
   title: "Security Work",
@@ -14,7 +13,6 @@ export default function WorkPage() {
     <>
       <div className="pt-16" />
       <SecurityWork index="" />
-      <PageNav current="work" />
     </>
   );
 }

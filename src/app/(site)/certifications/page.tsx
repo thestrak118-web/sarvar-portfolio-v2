@@ -1,7 +1,6 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { Certifications } from "@/components/sections/Certifications";
-import { PageNav } from "@/components/site/PageNav";
 import { placeOf } from "@/data/layout";
 import { profile } from "@/data/profile";
 
@@ -18,7 +17,6 @@ export default function CertificationsPage() {
     <>
       <div className="pt-16" />
       <Certifications index="" />
-      <PageNav current="certifications" />
     </>
   );
 }
