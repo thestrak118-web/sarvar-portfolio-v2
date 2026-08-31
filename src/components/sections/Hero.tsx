@@ -5,9 +5,8 @@ import Link from "next/link";
 import { heroMetrics, profile } from "@/data/profile";
 import { workHref } from "@/data/layout";
 import { HeroVisual } from "@/components/three/HeroVisual";
-import { ActionLink } from "@/components/ui/ActionLink";
 import { Magnetic } from "@/components/ui/MagneticButton";
-import { ArrowIcon, ArrowUpRightIcon, GitHubIcon, LinkedInIcon } from "@/components/ui/Icons";
+import { ArrowIcon, ArrowUpRightIcon } from "@/components/ui/Icons";
 
 export function Hero() {
   const reduce = useReducedMotion();
@@ -94,18 +93,6 @@ export function Hero() {
                 Ishlarni ko&rsquo;rish
                 <ArrowIcon className="size-4 transition-transform duration-300 group-hover:translate-x-0.5" />
               </Link>
-            </Magnetic>
-            <Magnetic>
-              <ActionLink
-                link={profile.links.github}
-                icon={<GitHubIcon className="size-4" />}
-              />
-            </Magnetic>
-            <Magnetic>
-              <ActionLink
-                link={profile.links.linkedin}
-                icon={<LinkedInIcon className="size-4" />}
-              />
             </Magnetic>
           </motion.div>
           </div>
