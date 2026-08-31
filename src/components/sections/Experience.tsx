@@ -1,4 +1,10 @@
-import { engagements, engagementNote } from "@/data/experience";
+import {
+  engagements,
+  engagementNote,
+  experienceHeading,
+  experienceDescription,
+  hasConfidential,
+} from "@/data/experience";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import { Tag } from "@/components/ui/Placeholder";
@@ -11,13 +17,15 @@ export function Experience({ index = "02" }: { index?: string }) {
         <SectionHeading
           index={index}
           eyebrow="Ish tajribasi"
-          title="Offensive tomonda olti oy."
-          description="Real engagement ishi. Mijoz ma'lumotlari yopiq qoladi, metodika esa ochiq."
+          title={experienceHeading}
+          description={experienceDescription}
           aside={
-            <div className="flex items-center gap-2 rounded-lg border border-dashed border-line px-3 py-2">
-              <span className="size-1.5 rounded-full bg-warn/80" aria-hidden />
-              <span className="label">Confidential / NDA</span>
-            </div>
+            hasConfidential ? (
+              <div className="flex items-center gap-2 rounded-lg border border-dashed border-line px-3 py-2">
+                <span className="size-1.5 rounded-full bg-warn/80" aria-hidden />
+                <span className="label">Confidential / NDA</span>
+              </div>
+            ) : undefined
           }
         />
 

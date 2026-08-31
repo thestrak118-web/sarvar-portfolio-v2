@@ -63,7 +63,7 @@ export function Certifications({ index = "05" }: { index?: string }) {
               <p className="text-[26px] font-semibold leading-none tracking-[-0.04em] text-fg">
                 {earned.length}
               </p>
-              <p className="label mt-2">Hack The Box sertifikati</p>
+              <p className="label mt-2">Olingan sertifikat</p>
             </div>
           }
         />

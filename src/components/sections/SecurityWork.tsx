@@ -39,7 +39,7 @@ export function SecurityWork({
                 <p className="text-[26px] font-semibold leading-none tracking-[-0.04em] text-fg">
                   {projects.length}
                 </p>
-                <p className="label mt-2">Offensive Security assessment</p>
+                <p className="label mt-2">Loyiha va assessment</p>
               </div>
             )
           }

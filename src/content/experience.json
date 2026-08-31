@@ -1,5 +1,5 @@
 {
-  "note": "Barcha ishlar mustaqil tadqiqot va o'quv muhitlarida bajarilgan; har bir engagement professional pentest hisoboti bilan yakunlangan.",
+  "note": "Har bir engagement professional pentest hisoboti bilan hujjatlashtirilgan: qayta takrorlash qadamlari, MITRE ATT&CK bog'lanishi va remediation tavsiyalari.",
   "engagements": [
     {
       "organisation": "Mustaqil xavfsizlik tadqiqoti (Self-Directed Security Research)",
@@ -57,5 +57,7 @@
         }
       ]
     }
-  ]
+  ],
+  "heading": "1+ yil offensive tomonda.",
+  "description": "Mustaqil tadqiqot va o'quv muhitlarida bajarilgan ishlar — metodika ham, natija ham ochiq."
 }
