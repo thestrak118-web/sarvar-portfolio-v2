@@ -14,7 +14,7 @@ const styles: Record<Variant, string> = {
 };
 
 const sizeClass =
-  "inline-flex h-11 items-center gap-2.5 rounded-[10px] px-5 text-[13px] font-medium tracking-[-0.01em] transition-all duration-300";
+  "inline-flex h-11 items-center gap-2.5 rounded-[10px] px-5 text-[13px] font-medium tracking-[-0.01em] transition-[background-color,border-color,color,box-shadow] duration-300";
 
 /**
  * Renders an external link only when a real URL is configured.

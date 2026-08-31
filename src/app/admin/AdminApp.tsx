@@ -67,12 +67,14 @@ function clean(value: Json): Json {
 /* ── inputs ────────────────────────────────────────────────────────────── */
 
 const inputClass =
-  "w-full rounded-lg border border-line bg-void px-3 py-2.5 text-[13.5px] text-fg outline-none transition-colors placeholder:text-faint focus:border-acid/60";
+  "w-full rounded-lg border border-line bg-void px-3 py-2.5 text-[13.5px] text-fg transition-colors placeholder:text-faint focus:border-acid/60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-acid";
 
-function Label({ field }: { field: Field }) {
+function Label({ field, htmlFor }: { field: Field; htmlFor?: string }) {
   return (
     <div className="mb-2 flex items-baseline gap-2">
-      <span className="text-[12.5px] font-medium text-fg">{field.label}</span>
+      <label htmlFor={htmlFor} className="text-[12.5px] font-medium text-fg">
+        {field.label}
+      </label>
       {"hint" in field && field.hint ? (
         <span className="text-[11.5px] text-dim">{field.hint}</span>
       ) : null}
@@ -117,11 +119,14 @@ function FieldControl({
     );
   }
 
+  const fieldId = `f-${path.join("-")}`;
+
   return (
     <div>
-      <Label field={field} />
+      <Label field={field} htmlFor={fieldId} />
       {field.type === "textarea" ? (
         <textarea
+          id={fieldId}
           value={String(value ?? "")}
           rows={field.rows ?? 3}
           onChange={(event) => onChange(path, event.target.value)}
@@ -129,6 +134,8 @@ function FieldControl({
         />
       ) : field.type === "strings" ? (
         <textarea
+          id={fieldId}
+          spellCheck={false}
           value={(Array.isArray(value) ? (value as string[]) : []).join("\n")}
           rows={Math.max(3, (Array.isArray(value) ? value.length : 0) + 1)}
           onChange={(event) => onChange(path, event.target.value.split("\n"))}
@@ -136,9 +143,10 @@ function FieldControl({
         />
       ) : field.type === "select" ? (
         <select
+          id={fieldId}
           value={String(value ?? "")}
           onChange={(event) => onChange(path, event.target.value)}
-          className={inputClass}
+          className={`${inputClass} bg-void text-fg`}
         >
           {field.options.map((option) => (
             <option key={option} value={option}>
@@ -148,14 +156,19 @@ function FieldControl({
         </select>
       ) : field.type === "number" ? (
         <input
+          id={fieldId}
           type="number"
+          inputMode="numeric"
           value={Number(value ?? 0)}
           onChange={(event) => onChange(path, Number(event.target.value))}
           className={inputClass}
         />
       ) : (
         <input
+          id={fieldId}
           type="text"
+          autoComplete="off"
+          spellCheck={false}
           value={String(value ?? "")}
           placeholder={field.type === "text" ? field.placeholder : undefined}
           onChange={(event) => onChange(path, event.target.value)}
@@ -198,15 +211,17 @@ function ImageControl({
     }
   };
 
+  const pathId = `f-${path.join("-")}`;
+
   return (
     <div>
-      <Label field={field} />
+      <Label field={field} htmlFor={pathId} />
       <div className="flex flex-wrap items-start gap-4 rounded-xl border border-line bg-void p-4">
         <div className="flex size-24 shrink-0 items-center justify-center overflow-hidden rounded-lg border border-line bg-surface">
           {src ? (
             // Local preview inside a dev-only tool: plain <img> keeps it simple.
             // eslint-disable-next-line @next/next/no-img-element
-            <img src={src} alt="" className="size-full object-cover" />
+            <img src={src} alt="" width={96} height={96} className="size-full object-cover" />
           ) : (
             <span className="text-[11px] text-dim">rasm yo&rsquo;q</span>
           )}
@@ -238,7 +253,10 @@ function ImageControl({
             ) : null}
           </div>
           <input
+            id={pathId}
             type="text"
+            autoComplete="off"
+            spellCheck={false}
             value={src}
             placeholder="/uploads/rasm.png"
             onChange={(event) => onChange(path, event.target.value)}
@@ -465,6 +483,7 @@ export function AdminApp({ initial }: { initial: Record<string, Json> }) {
           </span>
 
           <div className="ml-auto flex items-center gap-3">
+            <span aria-live="polite" className="contents">
             {status.text ? (
               <span
                 className={
@@ -478,6 +497,7 @@ export function AdminApp({ initial }: { initial: Record<string, Json> }) {
                 {status.text}
               </span>
             ) : null}
+            </span>
             <a
               href="/"
               target="_blank"

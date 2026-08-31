@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
@@ -19,6 +19,8 @@ export function Navigation() {
   const standalone = pathname !== "/";
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+  const toggleRef = useRef<HTMLButtonElement>(null);
   const reduce = useReducedMotion();
   const active = useActiveSection(links.filter((l) => l.anchor).map((l) => l.id));
 
@@ -33,6 +35,14 @@ export function Navigation() {
     const onKey = (event: KeyboardEvent) => event.key === "Escape" && setOpen(false);
     document.addEventListener("keydown", onKey);
     document.body.style.overflow = open ? "hidden" : "";
+
+    // Fokus overlay ostida qolib ketmasin
+    if (open) {
+      menuRef.current?.querySelector<HTMLAnchorElement>("a")?.focus();
+    } else if (document.activeElement === document.body) {
+      toggleRef.current?.focus();
+    }
+
     return () => {
       document.removeEventListener("keydown", onKey);
       document.body.style.overflow = "";
@@ -56,7 +66,7 @@ export function Navigation() {
 
       <header
         className={cn(
-          "fixed inset-x-0 top-0 z-50 transition-all duration-500",
+          "fixed inset-x-0 top-0 z-50 transition-[background-color,border-color,backdrop-filter] duration-500",
           scrolled
             ? "border-b border-line/80 bg-void/70 backdrop-blur-xl supports-[backdrop-filter]:bg-void/55"
             : "border-b border-transparent bg-transparent",
@@ -116,6 +126,7 @@ export function Navigation() {
               </IconAction>
             </div>
             <button
+              ref={toggleRef}
               type="button"
               onClick={() => setOpen((v) => !v)}
               aria-expanded={open}
@@ -132,12 +143,13 @@ export function Navigation() {
       <AnimatePresence>
         {open ? (
           <motion.div
+            ref={menuRef}
             id="mobile-menu"
             initial={reduce ? false : { opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={reduce ? undefined : { opacity: 0 }}
             transition={{ duration: 0.25 }}
-            className="fixed inset-0 z-40 bg-void/95 backdrop-blur-2xl md:hidden"
+            className="fixed inset-0 z-40 overscroll-contain bg-void/95 backdrop-blur-2xl md:hidden"
           >
             <div className="flex h-full flex-col justify-between px-6 pb-10 pt-24">
               <ul className="flex flex-col">

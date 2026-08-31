@@ -25,7 +25,7 @@ export function Statistics() {
           {statistics.map((stat, i) => (
             <Reveal key={stat.label} delay={0.06 * i} as="li">
               <div className="border-l border-line pl-5">
-                <p className="text-[clamp(2.4rem,5vw,3.4rem)] font-semibold leading-none tracking-[-0.05em] text-fg">
+                <p className="tnum text-[clamp(2.4rem,5vw,3.4rem)] font-semibold leading-none tracking-[-0.05em] text-fg">
                   <Counter value={stat.value} suffix={stat.suffix} />
                 </p>
                 <p className="mt-4 text-[13.5px] font-medium leading-snug text-fg/85">

@@ -126,7 +126,7 @@ export function Hero() {
                 {metric.href ? (
                   <Link href={metric.href} className={box}>
                     {body}
-                    <ArrowUpRightIcon className="absolute right-4 top-4 size-4 text-dim opacity-0 transition-all duration-300 group-hover:text-acid group-hover:opacity-100" />
+                    <ArrowUpRightIcon className="absolute right-4 top-4 size-4 text-dim opacity-0 transition-[opacity,color] duration-300 group-hover:text-acid group-hover:opacity-100" />
                   </Link>
                 ) : (
                   <div className={box}>{body}</div>

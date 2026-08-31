@@ -55,7 +55,7 @@ export function About({ index = "01" }: { index?: string }) {
                       width={880}
                       height={1100}
                       sizes="(max-width: 1024px) 100vw, 420px"
-                      className="aspect-[4/3] w-full object-cover grayscale-[40%] transition-all duration-700 hover:grayscale-0"
+                      className="aspect-[4/3] w-full object-cover grayscale-[40%] transition-[filter] duration-700 hover:grayscale-0"
                       priority={false}
                     />
                   </figure>
