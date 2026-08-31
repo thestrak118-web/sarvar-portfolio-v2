@@ -1,34 +1,56 @@
 "use client";
 
 import { useState } from "react";
-import { AnimatePresence, motion, useReducedMotion } from "motion/react";
-import { skillGroups } from "@/data/skills";
+import { motion, useReducedMotion } from "motion/react";
+import {
+  capabilityCount,
+  methodology,
+  skillCategories,
+  skillsSubtitle,
+  skillsTitle,
+} from "@/data/skills";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { cn } from "@/lib/utils";
+import { Reveal } from "@/components/ui/Reveal";
 import { EmptyState } from "@/components/ui/EmptyState";
+import { cn } from "@/lib/utils";
 
-const W = 640;
-const H = 440;
-const CX = W / 2;
-const CY = H / 2;
-const R = 132;
+/** Bitta capability qatori: nom + tegishli tool badge'lari. */
+function CapabilityRow({ name, tools }: { name: string; tools: string[] }) {
+  return (
+    <li className="group/row flex flex-col gap-2 border-t border-line/60 py-3.5 first:border-t-0 first:pt-0 sm:flex-row sm:items-baseline sm:gap-4">
+      <div className="flex min-w-0 flex-1 items-baseline gap-2.5">
+        <span
+          className="mt-[7px] size-1 shrink-0 rounded-full bg-dim transition-colors duration-300 group-hover/row:bg-acid"
+          aria-hidden
+        />
+        <span className="text-[14px] font-medium leading-snug text-fg">{name}</span>
+      </div>
 
-function nodePosition(i: number, total: number) {
-  const angle = (-90 + (i * 360) / total) * (Math.PI / 180);
-  return { x: CX + Math.cos(angle) * R, y: CY + Math.sin(angle) * R, angle };
+      {tools.length > 0 ? (
+        <ul className="flex flex-wrap gap-1.5 pl-[14px] sm:max-w-[58%] sm:justify-end sm:pl-0">
+          {tools.map((tool) => (
+            <li
+              key={tool}
+              className="rounded border border-line bg-white/[0.02] px-2 py-1 font-mono text-[10.5px] leading-none tracking-[0.06em] text-muted"
+            >
+              {tool}
+            </li>
+          ))}
+        </ul>
+      ) : null}
+    </li>
+  );
 }
 
-export function Skills({ index = "04" }: { index?: string }) {
-  const [activeId, setActiveId] = useState(skillGroups[0]?.id ?? "");
-  const [hovered, setHovered] = useState<string | null>(null);
+export function Skills({ index = "" }: { index?: string }) {
+  const [openId, setOpenId] = useState<string | null>(null);
   const reduce = useReducedMotion();
-  const group = skillGroups.find((g) => g.id === activeId) ?? skillGroups[0];
 
-  if (!group) {
+  if (skillCategories.length === 0) {
     return (
       <section id="skills" className="relative scroll-mt-24 border-t border-line py-16 sm:py-20">
         <div className="mx-auto max-w-[1240px] px-5 sm:px-8">
-          <SectionHeading index={index} eyebrow="Ko'nikmalar" title="Texnik ko'nikmalar xaritasi." />
+          <SectionHeading index={index} eyebrow="Ko'nikmalar" title={skillsTitle} />
           <EmptyState hint="Ko'nikmalar bo'limi" />
         </div>
       </section>
@@ -36,157 +58,118 @@ export function Skills({ index = "04" }: { index?: string }) {
   }
 
   return (
-    <section id="skills" className="relative scroll-mt-24 border-t border-line py-24 sm:py-32">
+    <section id="skills" className="relative scroll-mt-24 border-t border-line py-16 sm:py-20">
       <div className="mx-auto max-w-[1240px] px-5 sm:px-8">
         <SectionHeading
           index={index}
           eyebrow="Ko'nikmalar"
-          title="Texnik ko'nikmalar xaritasi."
-          description="Besh klaster, bitta jarayon: yuzani top, ta'sirni isbotla, tuzatiladigan qilib yoz."
+          title={skillsTitle}
+          description={skillsSubtitle}
+          aside={
+            <div className="rounded-xl border border-line bg-surface px-5 py-4">
+              <p className="text-[26px] font-semibold leading-none tracking-[-0.04em] text-fg">
+                {capabilityCount}
+              </p>
+              <p className="label mt-2">Capability · {skillCategories.length} yo&rsquo;nalish</p>
+            </div>
+          }
         />
 
-        <div className="mt-16 flex flex-col gap-8">
-          {/* ── cluster selector ─────────────────────────────── */}
-          <div>
-            <ul className="flex flex-wrap gap-2">
-              {skillGroups.map((item) => {
-                const active = item.id === activeId;
-                return (
-                  <li key={item.id}>
-                    <button
-                      type="button"
-                      onClick={() => setActiveId(item.id)}
-                      aria-pressed={active}
-                      className={cn(
-                        "inline-flex h-10 items-center gap-2.5 rounded-[10px] border px-4 text-[13px] transition-colors duration-300",
-                        active
-                          ? "border-acid/50 bg-acid/[0.08] text-fg"
-                          : "border-line bg-white/[0.02] text-muted hover:border-white/25 hover:text-fg",
-                      )}
-                    >
-                      {item.name}
-                      <span className={cn("font-mono text-[11px]", active ? "text-acid" : "text-dim")}>
-                        {String(item.skills.length).padStart(2, "0")}
-                      </span>
-                    </button>
-                  </li>
-                );
-              })}
-            </ul>
-
-            <p className="mt-5 text-[13.5px] leading-relaxed text-dim">{group.caption}</p>
-          </div>
-
-          {/* ── constellation ────────────────────────────────── */}
-          <div>
-            <div className="edge-card relative overflow-hidden rounded-2xl">
-              <div className="flex items-center justify-between border-b border-line px-5 py-3">
-                <span className="label">Klaster · {group.code}</span>
-                <span className="label text-acid/70">{group.skills.length} ta node</span>
-              </div>
-
-              {/* desktop: radial node graph */}
-              <div className="mx-auto hidden max-w-[780px] px-4 py-2 md:block">
-                <svg
-                  viewBox={`0 0 ${W} ${H}`}
-                  className="h-auto w-full"
-                  role="img"
-                  aria-label={`${group.name} ko'nikmalar xaritasi: ${group.skills.join(", ")}`}
+        {/* ── capability panellari ─────────────────────────────── */}
+        <div className="mt-12 grid gap-4 lg:grid-cols-2">
+          {skillCategories.map((category, i) => {
+            const open = openId === category.id;
+            return (
+              <Reveal key={category.id} delay={0.04 * (i % 2)}>
+                <article
+                  onMouseEnter={() => setOpenId(category.id)}
+                  onMouseLeave={() => setOpenId(null)}
+                  className={cn(
+                    "edge-card h-full rounded-2xl p-6 transition-colors duration-300 sm:p-7",
+                    open && "bg-elevated",
+                  )}
                 >
-                  <defs>
-                    <radialGradient id="hub-glow">
-                      <stop offset="0%" stopColor="#c3ff3e" stopOpacity="0.09" />
-                      <stop offset="100%" stopColor="#c3ff3e" stopOpacity="0" />
-                    </radialGradient>
-                  </defs>
+                  <header className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2 border-b border-line pb-4">
+                    <div className="flex items-baseline gap-3">
+                      <span
+                        className={cn(
+                          "size-1.5 rounded-full transition-colors duration-300",
+                          open ? "bg-acid" : "bg-line",
+                        )}
+                        aria-hidden
+                      />
+                      <h3 className="text-[17px] font-semibold tracking-[-0.02em] text-fg">
+                        {category.name}
+                      </h3>
+                    </div>
+                    <span className="label text-acid/70">{category.code}</span>
+                  </header>
 
-                  <circle cx={CX} cy={CY} r={R} fill="none" stroke="#1e1f23" strokeDasharray="2 6" />
-                  <circle cx={CX} cy={CY} r={R * 0.55} fill="none" stroke="#141417" />
-                  <circle cx={CX} cy={CY} r={86} fill="url(#hub-glow)" />
+                  <p className="mt-4 text-[13px] leading-relaxed text-dim">{category.caption}</p>
 
-                  <AnimatePresence mode="wait">
-                    <motion.g
-                      key={group.id}
-                      initial={reduce ? false : { opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={reduce ? undefined : { opacity: 0 }}
-                      transition={{ duration: 0.3 }}
-                    >
-                      {group.skills.map((skill, i) => {
-                        const { x, y } = nodePosition(i, group.skills.length);
-                        const right = x >= CX - 4;
-                        const isHot = hovered === skill;
-                        return (
-                          <g
-                            key={skill}
-                            onMouseEnter={() => setHovered(skill)}
-                            onMouseLeave={() => setHovered(null)}
-                            className="cursor-default"
-                          >
-                            <motion.line
-                              x1={CX}
-                              y1={CY}
-                              x2={x}
-                              y2={y}
-                              stroke={isHot ? "#c3ff3e" : "#26282c"}
-                              strokeWidth={isHot ? 1.2 : 1}
-                              initial={reduce ? false : { pathLength: 0, opacity: 0 }}
-                              animate={{ pathLength: 1, opacity: 1 }}
-                              transition={{ duration: 0.55, delay: 0.05 * i, ease: [0.16, 1, 0.3, 1] }}
-                            />
-                            <motion.circle
-                              cx={x}
-                              cy={y}
-                              r={isHot ? 5 : 3.6}
-                              fill={isHot ? "#c3ff3e" : "#0b0b0d"}
-                              stroke={isHot ? "#c3ff3e" : "#3a3d3c"}
-                              strokeWidth="1"
-                              initial={reduce ? false : { scale: 0, opacity: 0 }}
-                              animate={{ scale: 1, opacity: 1 }}
-                              transition={{ duration: 0.4, delay: 0.1 + 0.05 * i }}
-                            />
-                            <motion.text
-                              x={right ? x + 12 : x - 12}
-                              y={y + 4}
-                              textAnchor={right ? "start" : "end"}
-                              className="font-mono"
-                              fontSize="11.5"
-                              letterSpacing="0.04em"
-                              fill={isHot ? "#ecedea" : "#8d918d"}
-                              initial={reduce ? false : { opacity: 0 }}
-                              animate={{ opacity: 1 }}
-                              transition={{ duration: 0.4, delay: 0.14 + 0.05 * i }}
-                            >
-                              {skill}
-                            </motion.text>
-                          </g>
-                        );
-                      })}
-                    </motion.g>
-                  </AnimatePresence>
-
-                  <circle cx={CX} cy={CY} r={26} fill="#0b0b0d" stroke="#2a2d30" />
-                  <circle cx={CX} cy={CY} r={16} fill="none" stroke="#3a3d3c" strokeDasharray="1 4" />
-                  <circle cx={CX} cy={CY} r={4} fill="#c3ff3e" />
-                </svg>
-              </div>
-
-              {/* mobile: chip list */}
-              <ul className="grid grid-cols-1 gap-px bg-line/60 md:hidden">
-                {group.skills.map((skill, i) => (
-                  <li
-                    key={skill}
-                    className="flex items-center gap-3 bg-void px-5 py-3.5 font-mono text-[12.5px] text-fg"
-                  >
-                    <span className="label text-dim">{String(i + 1).padStart(2, "0")}</span>
-                    {skill}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
+                  <ul className="mt-5">
+                    {category.capabilities.map((capability) => (
+                      <CapabilityRow
+                        key={capability.name}
+                        name={capability.name}
+                        tools={capability.tools}
+                      />
+                    ))}
+                  </ul>
+                </article>
+              </Reveal>
+            );
+          })}
         </div>
 
+        {/* ── methodology ──────────────────────────────────────── */}
+        <div className="mt-16 border-t border-line pt-12">
+          <Reveal>
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-baseline sm:justify-between">
+              <h3 className="font-mono text-[13px] uppercase tracking-[0.18em] text-acid/80">
+                {methodology.title}
+              </h3>
+              <p className="max-w-xl text-[13px] leading-relaxed text-dim">{methodology.caption}</p>
+            </div>
+          </Reveal>
+
+          <ol className="mt-8 grid gap-px overflow-hidden rounded-2xl border border-line bg-line/60 sm:grid-cols-2 lg:grid-cols-4">
+            {methodology.steps.map((step, i) => (
+              <li key={step.name} className="relative bg-void">
+                <motion.div
+                  initial={reduce ? false : { opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true, margin: "-10%" }}
+                  transition={{ duration: 0.4, delay: reduce ? 0 : 0.04 * i }}
+                  className="group flex h-full items-start gap-3.5 px-5 py-5 transition-colors duration-300 hover:bg-surface"
+                >
+                  <span className="font-mono text-[11px] leading-[1.6] tracking-[0.1em] text-acid/70">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <span className="min-w-0">
+                    <span className="block font-mono text-[12.5px] uppercase leading-snug tracking-[0.1em] text-fg">
+                      {step.name}
+                    </span>
+                    <span className="mt-1.5 block text-[12px] leading-snug text-dim">
+                      {step.detail}
+                    </span>
+                  </span>
+                </motion.div>
+
+                {/* oqim ko'rsatkichi: mobilda pastga, kengroq ekranda o'ngga */}
+                {i < methodology.steps.length - 1 ? (
+                  <span
+                    className="pointer-events-none absolute bottom-[-7px] left-5 z-10 font-mono text-[11px] leading-none text-line sm:bottom-auto sm:left-auto sm:right-[-6px] sm:top-1/2 sm:-translate-y-1/2"
+                    aria-hidden
+                  >
+                    <span className="sm:hidden">↓</span>
+                    <span className="hidden sm:inline">→</span>
+                  </span>
+                ) : null}
+              </li>
+            ))}
+          </ol>
+        </div>
       </div>
     </section>
   );

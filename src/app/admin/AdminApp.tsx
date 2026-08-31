@@ -9,6 +9,13 @@ type Path = (string | number)[];
 
 /* ── immutable helpers ─────────────────────────────────────────────────── */
 
+/** "a.b" ko'rinishidagi kalitni bosqichlarga ajratadi. */
+function expand(path: Path): Path {
+  return path.flatMap((key) =>
+    typeof key === "string" && key.includes(".") ? key.split(".") : [key],
+  );
+}
+
 function getIn(value: Json, path: Path): Json {
   return path.reduce<Json>((acc, key) => {
     if (acc === null || acc === undefined) return undefined;
@@ -416,8 +423,9 @@ export function AdminApp({ initial }: { initial: Record<string, Json> }) {
   const handleChange = useCallback(
     (path: Path, next: Json) => {
       setData((current) => {
-        const file = path[0] as string;
-        return { ...current, [file]: setIn(current[file], path.slice(1), next) };
+        const full = expand(path);
+        const file = full[0] as string;
+        return { ...current, [file]: setIn(current[file], full.slice(1), next) };
       });
       setDirty((current) => ({ ...current, [section.file]: true }));
       setStatus({ kind: "idle", text: "" });
@@ -555,7 +563,7 @@ export function AdminApp({ initial }: { initial: Record<string, Json> }) {
               <FieldControl
                 key={field.key}
                 field={field}
-                value={getIn(sectionValue, [field.key])}
+                value={getIn(sectionValue, expand([field.key]))}
                 path={[section.file, field.key]}
                 onChange={changeInSection}
               />

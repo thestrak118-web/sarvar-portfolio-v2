@@ -1,70 +1,236 @@
-[
-  {
-    "id": "pentesting",
-    "name": "Pentesting",
-    "code": "TOOLING",
-    "caption": "Kundalik toolchain — avtomatlashtirishdan oldin qo'lda ishlatiladi.",
-    "skills": [
-      "Burp Suite",
-      "Metasploit",
-      "Nmap",
-      "Gobuster",
-      "Hydra",
-      "John the Ripper",
-      "Netcat",
-      "LinPEAS",
-      "Wireshark",
-      "enum4linux"
-    ]
-  },
-  {
-    "id": "techniques",
-    "name": "Texnikalar",
-    "code": "TECHNIQUES",
-    "caption": "Amalda qo'llanilgan hujum va escalation usullari.",
-    "skills": [
-      "Web app security (SQLi, XSS, file upload bypass)",
-      "Privilege escalation (SUID, sudo, cron)",
-      "Reverse shells",
-      "Log poisoning",
-      "Vulnerability scanning",
-      "Active Directory fundamentals"
-    ]
-  },
-  {
-    "id": "frameworks",
-    "name": "Frameworklar",
-    "code": "FRAMEWORKS",
-    "caption": "Har bir assessment shu tuzilmalar asosida quriladi.",
-    "skills": [
-      "MITRE ATT&CK",
-      "OWASP Top 10",
-      "Cyber Kill Chain",
-      "Threat intelligence analysis",
-      "Pentest report writing"
-    ]
-  },
-  {
-    "id": "development",
-    "name": "Dasturlash",
-    "code": "CODE",
-    "caption": "Engagement bosqichlarini avtomatlashtirish.",
-    "skills": [
-      "Python",
-      "Bash",
-      "Automation scripting"
-    ]
-  },
-  {
-    "id": "platforms",
-    "name": "Platformalar",
-    "code": "PLATFORMS",
-    "caption": "Amaliy soatlar shu yerda yig'ilgan.",
-    "skills": [
-      "Kali Linux",
-      "HackTheBox",
-      "TryHackMe",
-      "VulNyx"
+{
+  "title": "SECURITY STACK · CAPABILITIES",
+  "subtitle": "Toollardan ko'ra muhimrog'i — ularni real security workflow ichida qanday qo'llashim.",
+  "categories": [
+    {
+      "id": "web-security",
+      "code": "WEB-SEC",
+      "name": "Web Security",
+      "caption": "Ilova qatlamidagi hujum yuzasi — qo'lda tekshiriladi, skanerga ishonilmaydi.",
+      "capabilities": [
+        {
+          "name": "Access Control & Auth",
+          "tools": [
+            "IDOR / BOLA",
+            "Authentication & Authorization"
+          ]
+        },
+        {
+          "name": "Injection",
+          "tools": [
+            "SQL Injection",
+            "XSS",
+            "SSTI"
+          ]
+        },
+        {
+          "name": "Server-Side Surface",
+          "tools": [
+            "SSRF",
+            "LFI / RFI",
+            "File Upload"
+          ]
+        },
+        {
+          "name": "API Security",
+          "tools": [
+            "API Security",
+            "OWASP Top 10"
+          ]
+        },
+        {
+          "name": "Manual Testing Toolchain",
+          "tools": [
+            "Burp Suite"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "recon",
+      "code": "RECON",
+      "name": "Recon & Enumeration",
+      "caption": "Nishon nimani ko'rsatayotganini bilmasdan hujum boshlanmaydi.",
+      "capabilities": [
+        {
+          "name": "Attack Surface Mapping",
+          "tools": [
+            "Subdomain Enumeration",
+            "DNS Enumeration",
+            "OSINT"
+          ]
+        },
+        {
+          "name": "Host & Service Discovery",
+          "tools": [
+            "Nmap",
+            "httpx"
+          ]
+        },
+        {
+          "name": "Content Discovery",
+          "tools": [
+            "ffuf",
+            "Gobuster"
+          ]
+        },
+        {
+          "name": "Passive Collection",
+          "tools": [
+            "Subfinder",
+            "Amass"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exploitation",
+      "code": "EXPLOIT",
+      "name": "Exploitation",
+      "caption": "Ta'sir da'vo qilinmaydi — boshqariladigan PoC bilan ko'rsatiladi.",
+      "capabilities": [
+        {
+          "name": "Initial Access",
+          "tools": [
+            "Metasploit",
+            "Exploit Chaining"
+          ]
+        },
+        {
+          "name": "Custom Exploits",
+          "tools": [
+            "Custom Python Exploits",
+            "Payload Development"
+          ]
+        },
+        {
+          "name": "Credential Attacks",
+          "tools": [
+            "Credential Attacks"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "privesc",
+      "code": "PRIVESC",
+      "name": "Privilege Escalation & Post-Exploitation",
+      "caption": "Foothold'dan to'liq nazoratgacha — buzilishning haqiqiy ko'lami.",
+      "capabilities": [
+        {
+          "name": "Linux Privilege Escalation",
+          "tools": [
+            "SUID / sudo abuse",
+            "GTFOBins",
+            "LinPEAS"
+          ]
+        },
+        {
+          "name": "Windows Privilege Escalation",
+          "tools": [
+            "WinPEAS"
+          ]
+        },
+        {
+          "name": "Post-Exploitation",
+          "tools": [
+            "Credential & Secret Discovery"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "automation",
+      "code": "AUTOMATION",
+      "name": "Security Automation",
+      "caption": "Takrorlanadigan qadam skriptga aylanadi — engagement vaqti qisqaradi.",
+      "capabilities": [
+        {
+          "name": "Recon Automation",
+          "tools": [
+            "Python",
+            "Bash"
+          ]
+        },
+        {
+          "name": "Vulnerability Checks",
+          "tools": [
+            "Python",
+            "Go"
+          ]
+        },
+        {
+          "name": "Custom Security Tools",
+          "tools": [
+            "Go",
+            "API Integration"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ai-security",
+      "code": "AI-SEC",
+      "name": "AI for Security",
+      "caption": "Model yordamidagi tooling — triage tezlashadi, topilma uchun javobgarlik odamda qoladi.",
+      "capabilities": [
+        {
+          "name": "AI-assisted Reconnaissance",
+          "tools": [
+            "LLM / API Integration"
+          ]
+        },
+        {
+          "name": "Vulnerability Analysis",
+          "tools": [
+            "Security Agents"
+          ]
+        },
+        {
+          "name": "Security Workflow Automation",
+          "tools": [
+            "Automated Report Assistance"
+          ]
+        }
+      ]
+    }
+  ],
+  "methodology": {
+    "title": "METHODOLOGY",
+    "caption": "Tasodifiy tool ishga tushirish emas — har bir engagement shu ketma-ketlikda boradi.",
+    "steps": [
+      {
+        "name": "Recon",
+        "detail": "Ochiq ma'lumot va yuza"
+      },
+      {
+        "name": "Enumeration",
+        "detail": "Har bir service chuqur"
+      },
+      {
+        "name": "Attack Surface Mapping",
+        "detail": "Nima hujum qilinadi"
+      },
+      {
+        "name": "Hypothesis",
+        "detail": "Qaysi zaiflik ehtimoli"
+      },
+      {
+        "name": "Validation",
+        "detail": "Qo'lda tasdiqlash"
+      },
+      {
+        "name": "Exploitation",
+        "detail": "Boshqariladigan PoC"
+      },
+      {
+        "name": "Privilege Escalation",
+        "detail": "To'liq nazorat"
+      },
+      {
+        "name": "Reporting",
+        "detail": "MITRE ATT&CK + remediation"
+      }
     ]
   }
-]
+}

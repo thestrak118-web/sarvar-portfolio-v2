@@ -270,21 +270,46 @@ export const sections: Section[] = [
   {
     file: "skills",
     title: "Ko'nikmalar",
-    description: "Skill map'dagi 5 klaster.",
-    arrayRoot: true,
+    description:
+      "Security stack: yo'nalishlar, ularning capability'lari va har birining tool badge'lari; pastda methodology bosqichlari.",
     fields: [
+      { key: "title", label: "Sarlavha", type: "text" },
+      { key: "subtitle", label: "Tavsif", type: "textarea", rows: 2 },
       {
-        key: "root",
-        label: "Klasterlar",
+        key: "categories",
+        label: "Yo'nalishlar",
         type: "objects",
-        addLabel: "Klaster qo'shish",
+        addLabel: "Yo'nalish qo'shish",
         titleKey: "name",
         fields: [
           { key: "id", label: "ID", type: "text" },
           { key: "name", label: "Nomi", type: "text" },
-          { key: "code", label: "Kodi", type: "text", hint: "Masalan: OFF-SEC" },
+          { key: "code", label: "Kodi", type: "text", hint: "Masalan: WEB-SEC" },
           { key: "caption", label: "Izoh", type: "textarea", rows: 2 },
-          { key: "skills", label: "Ko'nikmalar", type: "strings" },
+          {
+            key: "capabilities",
+            label: "Capability'lar",
+            type: "objects",
+            addLabel: "Capability qo'shish",
+            titleKey: "name",
+            fields: [
+              { key: "name", label: "Nomi", type: "text" },
+              { key: "tools", label: "Tool va texnikalar", type: "strings" },
+            ],
+          },
+        ],
+      },
+      { key: "methodology.title", label: "Methodology sarlavhasi", type: "text" },
+      { key: "methodology.caption", label: "Methodology izohi", type: "textarea", rows: 2 },
+      {
+        key: "methodology.steps",
+        label: "Methodology bosqichlari",
+        type: "objects",
+        addLabel: "Bosqich qo'shish",
+        titleKey: "name",
+        fields: [
+          { key: "name", label: "Nomi", type: "text" },
+          { key: "detail", label: "Izoh", type: "text" },
         ],
       },
     ],
