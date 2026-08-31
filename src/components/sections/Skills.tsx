@@ -4,7 +4,6 @@ import { useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { skillGroups } from "@/data/skills";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { Reveal } from "@/components/ui/Reveal";
 import { cn } from "@/lib/utils";
 import { EmptyState } from "@/components/ui/EmptyState";
 
@@ -185,38 +184,9 @@ export function Skills({ index = "04" }: { index?: string }) {
                 ))}
               </ul>
             </div>
-
-            <Reveal delay={0.1}>
-              <p className="label mt-5">
-                {skillGroups.flatMap((g) => g.skills).length} ko&rsquo;nikma ·{" "}
-                {skillGroups.length} klaster · tafsilot uchun node ustiga olib boring
-              </p>
-            </Reveal>
           </div>
         </div>
 
-        {/* Har bir klaster to'liq ochiq ro'yxatda — hech narsa yashirin qolmaydi */}
-        <div className="mt-6 grid gap-px overflow-hidden rounded-2xl border border-line bg-line/60">
-          {skillGroups.map((item) => (
-            <div key={item.id} className="bg-void p-6 sm:p-7">
-              <div className="flex flex-wrap items-baseline gap-x-4 gap-y-2">
-                <h3 className="text-[17px] font-medium text-fg">{item.name}</h3>
-                <span className="label text-acid/70">{item.code}</span>
-                <span className="text-[13px] text-dim">{item.caption}</span>
-              </div>
-              <ul className="mt-5 flex flex-wrap gap-2">
-                {item.skills.map((skill) => (
-                  <li
-                    key={skill}
-                    className="rounded-md border border-line bg-white/[0.02] px-3 py-1.5 font-mono text-[11.5px] tracking-[0.04em] text-muted"
-                  >
-                    {skill}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );
