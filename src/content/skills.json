@@ -1,12 +1,12 @@
 {
   "title": "SECURITY STACK · CAPABILITIES",
-  "subtitle": "Toollardan ko'ra muhimrog'i — ularni real security workflow ichida qanday qo'llashim.",
+  "subtitle": "Tool'lardan ko'ra muhimrog'i — ularni real security workflow ichida qanday qo'llashim.",
   "categories": [
     {
       "id": "web-security",
       "code": "WEB-SEC",
       "name": "Web Security",
-      "caption": "Ilova qatlamidagi hujum yuzasi — qo'lda tekshiriladi, skanerga ishonilmaydi.",
+      "caption": "Ilova qatlamidagi attack surface — qo'lda tekshiriladi, skanerga ishonilmaydi.",
       "capabilities": [
         {
           "name": "Access Control & Auth",
@@ -208,18 +208,18 @@
           ]
         },
         {
-          "name": "Konteyner",
+          "name": "Container",
           "tools": [
             "Docker",
-            "Konteyner izolyatsiyasi"
+            "Container isolation"
           ]
         },
         {
-          "name": "Server & tarmoq",
+          "name": "Server & network",
           "tools": [
             "Linux",
             "nginx",
-            "TLS / CDN konfiguratsiyasi"
+            "TLS / CDN configuration"
           ]
         }
       ]
@@ -231,33 +231,33 @@
       "caption": "Reliz chiqishdan oldin — xatolik ham, xavfsizlik ham tekshiriladi.",
       "capabilities": [
         {
-          "name": "Funksional testlash",
+          "name": "Functional testing",
           "tools": [
-            "Funksional",
-            "Regressiya",
+            "Functional",
+            "Regression",
             "UI"
           ]
         },
         {
-          "name": "Test hujjatlari",
+          "name": "Test documentation",
           "tools": [
-            "Test-case yozish",
+            "Test case design",
             "Bug reporting"
           ]
         },
         {
-          "name": "Reliz nazorati",
+          "name": "Release control",
           "tools": [
-            "Reliz oldi tekshiruvi",
+            "Pre-release check",
             "Retest"
           ]
         },
         {
           "name": "Security in QA",
           "tools": [
-            "Input validatsiya",
-            "Ruxsatlar",
-            "Sessiya boshqaruvi"
+            "Input validation",
+            "Authorization",
+            "Session management"
           ]
         }
       ]

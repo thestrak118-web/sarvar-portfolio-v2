@@ -60,7 +60,7 @@
         {
           "no": "03",
           "title": "Enumeration",
-          "objective": "Har bir ochiq service'ni chuqur tekshirish: kataloglar, parametrlar, autentifikatsiya nuqtalari, default material va noto'g'ri sozlashlar.",
+          "objective": "Har bir ochiq service'ni chuqur tekshirish: kataloglar, parametrlar, autentifikatsiya nuqtalari, default material va noto'g'ri konfiguratsiya.",
           "content": "",
           "points": []
         },
@@ -124,7 +124,7 @@
       "codename": "",
       "category": "Security tooling",
       "targetType": "Python · Bash",
-      "summary": "Wordlist generatsiyasi, service fingerprinting va exploit zanjirini avtomatlashtiruvchi o'z skriptlarim. Natijada qo'lda enumeration vaqti ~4 soatdan 90 daqiqadan kamgacha qisqardi.",
+      "summary": "Wordlist generatsiyasi, service fingerprinting va exploit zanjirini avtomatlashtiruvchi o'z skriptlarim. Natijada qo'lda enumeration vaqti ~4 soatdan 90 daqiqagacha qisqardi.",
       "cover": "",
       "tags": [
         "RECON",
@@ -163,7 +163,7 @@
         {
           "no": "03",
           "title": "Enumeration",
-          "objective": "Har bir ochiq service'ni chuqur tekshirish: kataloglar, parametrlar, autentifikatsiya nuqtalari, default material va noto'g'ri sozlashlar.",
+          "objective": "Har bir ochiq service'ni chuqur tekshirish: kataloglar, parametrlar, autentifikatsiya nuqtalari, default material va noto'g'ri konfiguratsiya.",
           "content": "",
           "points": []
         },
@@ -264,7 +264,7 @@
         {
           "no": "03",
           "title": "Enumeration",
-          "objective": "Har bir ochiq service'ni chuqur tekshirish: kataloglar, parametrlar, autentifikatsiya nuqtalari, default material va noto'g'ri sozlashlar.",
+          "objective": "Har bir ochiq service'ni chuqur tekshirish: kataloglar, parametrlar, autentifikatsiya nuqtalari, default material va noto'g'ri konfiguratsiya.",
           "content": "",
           "points": []
         },

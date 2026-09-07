@@ -13,7 +13,7 @@
       "areas": [
         {
           "title": "Production pentest (10+ loyiha)",
-          "detail": "Black-box → authenticated tashqi testlar PTES va OWASP WSTG bosqichlari bo'yicha: recon, enumeration, ekspluatatsiya, post-exploitation. Har bir engagement yozma ruxsat, ROE va vaqt muhrli qaydlar bilan olib borildi."
+          "detail": "Black-box → authenticated tashqi testlar PTES va OWASP WSTG bosqichlari bo'yicha: recon, enumeration, exploitation, post-exploitation. Har bir engagement yozma ruxsat, ROE va vaqt muhrli qaydlar bilan olib borildi."
         },
         {
           "title": "SaaS platformasi + AWS EC2 auditi",
@@ -29,7 +29,7 @@
         },
         {
           "title": "QA / sifat nazorati",
-          "detail": "20+ yirik veb-sayt va admin dashboard uchun funksional, regressiya va UI testlash; 90+ reliz ishga tushirishdan oldin test qilinib tasdiqlandi. Test-case'lar tuzildi, QA jarayoniga xavfsizlik tekshiruvi (input validatsiya, ruxsatlar, sessiya boshqaruvi) qo'shildi."
+          "detail": "20+ yirik veb-sayt va admin dashboard uchun funksional, regression va UI testlash; 90+ reliz ishga tushirishdan oldin test qilinib tasdiqlandi. Test-case'lar tuzildi, QA jarayoniga xavfsizlik tekshiruvi (input validation, authorization, session management) qo'shildi."
         }
       ],
       "tags": [
@@ -55,7 +55,7 @@
           "detail": "20+ CTF mashinasida Nmap, Burp Suite, Metasploit, Gobuster, Hydra va LinPEAS bilan boshdan oxirigacha test; har bir engagement uchun alohida professional hisobot."
         },
         {
-          "title": "Ekspluatatsiya qilingan zaiflik sinflari",
+          "title": "Exploit qilingan zaiflik sinflari",
           "detail": "Memcached credential leakage, file upload bypass, Python module hijacking, LFI + log poisoning, KeePass database cracking va GTFOBins SUID/sudo privilege escalation — jami 6 xil sinf."
         },
         {
@@ -82,14 +82,14 @@
       "periodPending": false,
       "mode": "Ta'lim dasturi",
       "confidential": false,
-      "summary": "Tarmoq xavfsizligi, penetration testing, web ilova xavfsizligi, SIEM, Active Directory va incident response yo'nalishlari bo'yicha amaliy dastur.",
+      "summary": "Tarmoq xavfsizligi, penetration testing, web ilovalar xavfsizligi, SIEM, Active Directory va incident response yo'nalishlari bo'yicha amaliy dastur.",
       "areas": [
         {
           "title": "Tarmoq va host xavfsizligi",
           "detail": "Tarmoq xavfsizligi asoslari, Active Directory muhitini tekshirish va hostlarni qattiqlashtirish."
         },
         {
-          "title": "Web ilova xavfsizligi",
+          "title": "Web ilovalar xavfsizligi",
           "detail": "Web ilovalardagi asosiy zaiflik sinflari va ularni qo'lda tekshirish metodikasi."
         },
         {

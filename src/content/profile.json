@@ -18,7 +18,7 @@
   "bio": [
     "Men xavfsizlikning hujum tomonida ishlayman: attack surface'ni xaritaga tushiraman, tajovuzkor undan amalda nima qila olishini isbotlayman va tuzatish yo'li aniq bo'ladigan qilib hisobot yozaman. ASOS IT'da production muhitidagi 10+ real loyiha test qilingan; bundan tashqari HackTheBox, TryHackMe va VulNyx'da 20+ mashina.",
     "Topilmalar orasida CVSS 9.8 darajali, autentifikatsiyasiz to'liq platforma egallash zanjirlari bor — manba kod va .env oshkorligidan JWT imzo kalitini tiklab SuperAdmin tokeni yasashgacha, OTP'ni chetlab o'tib account takeover'gacha. Har bir engagement PTES / OWASP WSTG bo'yicha tuzilib, CVSS 3.1 bahosi, attack walkthrough, MITRE ATT&CK bog'lanishi va remediation rejasi bilan yakunlanadi.",
-    "Nima topilmagani ham hisobotga kiradi: SQLi, IDOR, traversal, SSRF, JWT alg-confusion va RCE tizimli sinalib rad etilsa, bu negative results sifatida yoziladi. Ishning ikkinchi yarmi — muhandislik: recon va enumeration Python, Bash va Go bilan avtomatlashtiriladi; bu qo'lda enumeration vaqtini ~4 soatdan 90 daqiqadan kamgacha qisqartirdi."
+    "Nima topilmagani ham hisobotga kiradi: SQLi, IDOR, traversal, SSRF, JWT alg-confusion va RCE tizimli sinalib rad etilsa, bu negative results sifatida yoziladi. Ishning ikkinchi yarmi — muhandislik: recon va enumeration Python, Bash va Go bilan avtomatlashtiriladi; bu qo'lda enumeration vaqtini ~4 soatdan 90 daqiqagacha qisqartirdi."
   ],
   "spec": [
     {
@@ -46,11 +46,11 @@
       "value": "HTB / TryHackMe / VulNyx"
     },
     {
-      "key": "Skripting",
+      "key": "Scripting",
       "value": "Python / Bash / Go"
     },
     {
-      "key": "Frameworklar",
+      "key": "Framework'lar",
       "value": "MITRE ATT&CK · OWASP"
     },
     {
@@ -59,7 +59,7 @@
     },
     {
       "key": "Tillar",
-      "value": "O'zbek · Ingliz"
+      "value": "O'zbek (ona tili) · Ingliz (B1+)"
     }
   ],
   "heroMetrics": [
@@ -110,7 +110,7 @@
     {
       "value": 6,
       "suffix": "",
-      "label": "Zaiflik sinfi ekspluatatsiya qilingan",
+      "label": "Exploit qilingan zaiflik sinfi",
       "detail": "web · privesc · credential"
     },
     {
