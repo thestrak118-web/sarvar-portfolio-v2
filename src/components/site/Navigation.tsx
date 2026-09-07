@@ -8,7 +8,7 @@ import { profile } from "@/data/profile";
 import { useActiveSection } from "@/hooks/useActiveSection";
 import { navLinks } from "@/data/layout";
 import { cn } from "@/lib/utils";
-import { CloseIcon, GitHubIcon, LinkedInIcon, MenuIcon } from "@/components/ui/Icons";
+import { CloseIcon, DocumentIcon, GitHubIcon, LinkedInIcon, MenuIcon } from "@/components/ui/Icons";
 import { IconAction } from "@/components/ui/ActionLink";
 
 /** Menu entries come from layout.json: pages link to routes, the rest to anchors. */
@@ -127,6 +127,9 @@ export function Navigation() {
               </IconAction>
               <IconAction link={profile.links.linkedin} label="LinkedIn profili">
                 <LinkedInIcon />
+              </IconAction>
+              <IconAction link={profile.links.cv} label="CV (PDF) yuklab olish">
+                <DocumentIcon />
               </IconAction>
             </div>
             {showLinks ? (

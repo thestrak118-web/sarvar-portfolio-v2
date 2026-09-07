@@ -37,6 +37,17 @@ export function MailIcon({ className = "size-4", ...rest }: IconProps) {
   );
 }
 
+export function DocumentIcon({ className = "size-4", ...rest }: IconProps) {
+  return (
+    <svg {...base} className={className} {...rest}>
+      <path d="M14 2.5H7a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7.5Z" />
+      <path d="M14 2.5v5h5" />
+      <path d="M12 11v6" />
+      <path d="m9.5 14.5 2.5 2.5 2.5-2.5" />
+    </svg>
+  );
+}
+
 export function ArrowIcon({ className = "size-4", ...rest }: IconProps) {
   return (
     <svg {...base} className={className} {...rest}>

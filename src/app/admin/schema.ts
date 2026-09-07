@@ -141,6 +141,7 @@ export const sections: Section[] = [
       { key: "linkedin", label: "LinkedIn profil URL", type: "text", placeholder: "https://www.linkedin.com/in/..." },
       { key: "email", label: "Email", type: "text", hint: "mailto: avtomatik qo'shiladi", placeholder: "ism@example.com" },
       { key: "htb", label: "Hack The Box profil URL", type: "text", placeholder: "https://app.hackthebox.com/users/..." },
+      { key: "cv", label: "CV (PDF) havolasi", type: "text", hint: "public/ ichidagi yo'l yoki tashqi URL", placeholder: "/cv/Sarvar_Tolipov_CV.pdf" },
     ],
   },
   {

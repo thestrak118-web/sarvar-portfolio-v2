@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<title>Sarvar Tolipov — Rezyume</title>
+<style>
+  @page { size: A4; margin: 8mm 11mm 6mm 11mm; }
+  * { box-sizing: border-box; }
+  body { font-family: "Lato", "Noto Sans", sans-serif; font-size: 8.8pt; line-height: 1.29;
+         color: #1c2430; margin: 0;
+         font-kerning: normal; font-variant-ligatures: common-ligatures;
+         text-rendering: optimizeLegibility; }
+  .name { font-size: 21pt; font-weight: 900; letter-spacing: 1.6px; color: #0f1a2b; }
+  .role { font-size: 9.8pt; font-weight: 700; letter-spacing: 1.8px; text-transform: uppercase;
+          color: #2f6f8f; margin-top: 2px; }
+  .contact { font-size: 8.8pt; color: #495566; margin-top: 6px; }
+  .contact span { white-space: nowrap; }
+  .sep { color: #b9c3cf; padding: 0 6px; }
+  header { border-bottom: 2.2px solid #2f6f8f; padding-bottom: 8px; margin-bottom: 12px; }
+  h2 { font-size: 9.4pt; font-weight: 900; letter-spacing: 1.1px; text-transform: uppercase;
+       color: #0f1a2b; margin: 7px 0 3.5px; padding-bottom: 2.5px;
+       border-bottom: 1px solid #d6dde5; }
+  h2:first-of-type { margin-top: 0; }
+  p { margin: 0 0 4px; text-align: left; }
+  .job-title { font-weight: 700; font-size: 10pt; color: #0f1a2b; }
+  .job-meta { font-size: 8.8pt; color: #5c6878; font-style: italic; margin-bottom: 5px; }
+  ul { margin: 0; padding-left: 0; list-style: none; }
+  li { position: relative; padding-left: 13px; margin-bottom: 2.5px; text-align: left; }
+  li::before { content: ""; position: absolute; left: 1px; top: 0.42em; width: 0; height: 0;
+               border-left: 4px solid #2f6f8f; border-top: 3px solid transparent;
+               border-bottom: 3px solid transparent; }
+  .sub { font-weight: 700; font-size: 9pt; color: #2f6f8f; margin: 5px 0 3px; }
+  .sub:first-child { margin-top: 0; }
+  table.skills { width: 100%; border-collapse: collapse; }
+  table.skills td { vertical-align: top; padding: 1.6px 0; border-bottom: 1px solid #eaeef2; }
+  table.skills tr:last-child td { border-bottom: none; }
+  td.k { width: 27%; font-weight: 700; color: #0f1a2b; padding-right: 10px; }
+  .edu-title { font-weight: 700; font-size: 9.8pt; color: #0f1a2b; }
+  .edu-org { font-size: 9.2pt; color: #2f6f8f; font-weight: 600; }
+  .muted { color: #5c6878; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="name">SARVAR TOLIPOV</div>
+  <div class="role">Kiberxavfsizlik mutaxassisi &nbsp;·&nbsp; Penetration Tester</div>
+  <div class="contact">
+    <span>thestrak118@gmail.com</span><span class="sep">|</span>
+    <span>linkedin.com/in/sarvar-tolipov-436aba399</span><span class="sep">|</span>
+    <span>github.com/thestrak118-web</span><span class="sep">|</span>
+    <span>+998 50 522 11 91</span><span class="sep">|</span>
+    <span>Toshkent, O‘zbekiston</span>
+  </div>
+</header>
+
+<h2>Qisqacha ma'lumot</h2>
+<p>Production muhitidagi <strong>10+ real loyihada</strong> tashqi penetration testing o‘tkazgan
+kiberxavfsizlik mutaxassisi. Topilmalar orasida <strong>CVSS 9.8 (Critical)</strong> darajali,
+autentifikatsiyasiz to‘liq platforma egallash zanjirlari bor — barchasi PoC bilan jonli isbotlangan va
+CVSS 3.1 bo‘yicha professional hisobotda hujjatlashtirilgan. QA yo‘nalishida junior tajriba:
+<strong>20+ yirik sayt/dashboard</strong>, <strong>90+ reliz</strong>. <strong>HTB CPTS</strong> sertifikati
+olingan (2026); SWES va CDSA kurslari 100% yakunlangan — imtihonlar kutilmoqda.</p>
+
+<h2>Ish tajribasi</h2>
+<div class="job-title">ASOS IT — QA Engineer &amp; Penetration Tester
+  <span class="muted" style="font-weight:400; font-style:italic; font-size:8.6pt;">| Aprel 2026 – hozirgacha</span></div>
+
+<div class="sub">Kiberxavfsizlik / penetration testing</div>
+<ul>
+  <li>Production infratuzilmalarida <strong>10+ to‘liq qamrovli tashqi pentest</strong>
+      (black-box → authenticated) <strong>PTES / OWASP WSTG</strong> bo‘yicha bajarildi — yozma ruxsat,
+      ROE va vaqt muhrli qaydlar bilan.</li>
+  <li><strong>SaaS platformasi + AWS EC2 auditi:</strong> <strong>3 Critical (CVSS 9.1–9.8)</strong>,
+      4 Medium va 6 Info topilma aniqlandi. Autentifikatsiyasiz to‘liq platforma egallash zanjiri jonli
+      isbotlandi: catch-all route orqali manba kod va <em>.env</em> oshkorligi → JWT imzo kalitini tiklash →
+      SuperAdmin token yasash → himoyalangan admin endpointlariga kirish.</li>
+  <li>Shu auditda butun ma’lumotlar bazasini autentifikatsiyasiz yuklab olish (9.1), qayta ishlatilgan
+      JWT sekreti (9.1), auth tokenning URL’da uzatilishi, IDOR sirti va jonli API kalitlari oshkorligi
+      aniqlandi; biznes ta’siri baholanib, ustuvorlashtirilgan tuzatish rejasi taqdim etildi.</li>
+  <li><strong>Ta’lim/qabul platformasi:</strong> OTP tasdiqlashni chetlab o‘tish orqali <strong>account
+      takeover (CVSS 9.8)</strong> — faqat telefon raqami bilan istalgan akkaunt egallanardi; shuningdek
+      doimiy kirish beruvchi token sizishi, shaxsni tasdiqlovchi hujjatlarga (pasport, diplom) nazoratsiz
+      kirish, parol xeshlarining oshkorligi va user enumeration aniqlandi.</li>
+  <li>SQLi, IDOR, path traversal/LFI, SSRF, JWT alg-confusion, command injection va file-upload → RCE
+      tizimli sinalib <strong>rad etildi</strong> va hisobotda <em>negative results</em> sifatida
+      hujjatlashtirildi. Har bir engagement CVSS 3.1 bahosi, executive summary, attack walkthrough,
+      proof of access, tuzatish rejasi va cleanup statement bilan yakunlanib, retest o‘tkazildi.</li>
+</ul>
+<div class="sub">QA / sifat nazorati</div>
+<ul>
+  <li><strong>20+ yirik veb-sayt va admin dashboard</strong> uchun funksional, regressiya hamda UI
+      testlari o‘tkazildi; topilgan xatoliklar takrorlash qadamlari, kutilgan/haqiqiy natija va
+      skrinshotlar bilan hujjatlashtirildi.</li>
+  <li><strong>90+ reliz (zapusk)</strong> ishga tushirishdan oldin test qilinib tasdiqlandi —
+      relizga chiqqan kritik xatoliklar soni sezilarli kamaydi.</li>
+  <li>Test-case’lar tuzildi va yangilab borildi; QA jarayoniga xavfsizlik tekshiruvi (input validatsiya,
+      ruxsatlar, sessiya boshqaruvi) qo‘shildi.</li>
+</ul>
+
+<h2>Mustaqil loyihalar va tadqiqot</h2>
+<ul>
+  <li>HackTheBox, TryHackMe va VulNyx’da <strong>20+ mashina</strong> ekspluatatsiya qilindi (2025 –
+      hozirgacha): Memcached credential leak, file upload bypass, Python module hijacking, LFI + log
+      poisoning, KeePass cracking, GTFOBins privesc. Yozilgan Python/Bash avtomatlashtirish skriptlari
+      tekshiruv vaqtini ~4 soatdan 90 daqiqagacha qisqartirdi.</li>
+  <li><strong>recontool</strong> — attack surface recon frameworki (Go/Python): host, xizmat va content
+      discovery bitta ish oqimida. <strong>QAForge Academy</strong> — geymifikatsiyalangan QA o‘quv
+      platformasi (TypeScript).</li>
+</ul>
+
+<h2>Sertifikatlar</h2>
+<p><span class="sub" style="display:inline; margin:0;">Olingan:</span>
+   <strong>HTB Certified Penetration Testing Specialist (CPTS)</strong> — Hack The Box, 27.08.2026 ·
+   HAAD Red-0, Penetration Testing asoslari — 05.05.2026 (HID: 866912I136)</p>
+<p><span class="sub" style="display:inline; margin:0;">Kurs 100% yakunlangan, imtihon kutilmoqda:</span>
+   HTB Web Exploitation Specialist (SWES) · HTB Certified Defensive Security Analyst (CDSA)</p>
+<p style="margin-top:3px;"><span class="sub" style="display:inline; margin:0;">Tayyorgarlik jarayonida:</span> CompTIA Security+</p>
+
+<h2>Ta'lim</h2>
+<div class="edu-title">Kiberxavfsizlik bo‘yicha professional dastur
+  <span class="muted" style="font-weight:400; font-style:italic; font-size:8.8pt;">
+  &nbsp;| Sentabr 2025 – Iyun 2026</span></div>
+<div class="edu-org">HAAD Training Center</div>
+<p class="muted">Tarmoq va veb-ilovalar xavfsizligi, penetration testing, SIEM, Active Directory, incident response.</p>
+
+<h2>Texnik ko'nikmalar</h2>
+<table class="skills">
+  <tr><td class="k">Pentest vositalari</td>
+      <td>Burp Suite, nmap, ffuf, Gobuster, Metasploit, Hydra, John the Ripper, curl/jq, PyJWT, openssl,
+          Wireshark, LinPEAS</td></tr>
+  <tr><td class="k">Texnikalar</td>
+      <td>Veb-ilova va API xavfsizligi (SQLi, XSS, IDOR, auth/OTP bypass, JWT hujumlari, SSRF, LFI,
+          fayl-oshkorlik), privesc (SUID, sudo, cron), reverse shell, Active Directory asoslari</td></tr>
+  <tr><td class="k">Metodologiyalar</td>
+      <td>PTES, OWASP WSTG, OWASP Top 10, MITRE ATT&amp;CK, CVSS 3.1, pentest hisobot yozish</td></tr>
+  <tr><td class="k">Infratuzilma</td>
+      <td>AWS EC2, Docker/konteyner izolyatsiyasi, nginx, GCP IAM / service-account auditi, Linux</td></tr>
+  <tr><td class="k">QA / Testlash</td>
+      <td>Funksional, regressiya va UI testlash, test-case yozish, bug reporting, reliz oldi tekshiruvi</td></tr>
+  <tr><td class="k">Dasturlash</td><td>Python, Bash, Go, avtomatlashtirish skriptlari</td></tr>
+  <tr><td class="k">Tillar</td><td>O‘zbek (ona tili), Ingliz (B1+ darajada)</td></tr>
+</table>
+
+</body>
+</html>
