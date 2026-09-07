@@ -52,8 +52,8 @@ export function About({ index = "01" }: { index?: string }) {
                     <Image
                       src={profile.photo}
                       alt={profile.name}
-                      width={880}
-                      height={1100}
+                      width={640}
+                      height={640}
                       sizes="(max-width: 1024px) 100vw, 420px"
                       className="aspect-[4/3] w-full object-cover grayscale-[40%] transition-[filter] duration-700 hover:grayscale-0"
                       priority={false}
