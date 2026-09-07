@@ -101,7 +101,7 @@ export function CaseStudy({
                 <MetaRow label="Kod nomi" value={project.codename || "[ oshkor qilinmagan ]"} pending={!project.codename} />
                 <MetaRow label="Nishon" value={project.targetType} />
                 <MetaRow label="Holat" value={project.status} />
-                <MetaRow label="Qiyinlik" value={project.difficulty} pending />
+                <MetaRow label="Qiyinlik" value={project.difficulty || "[ belgilanmagan ]"} pending={!project.difficulty} />
                 <MetaRow label="CVSS v3.1" value={project.cvss || "[ baholanmagan ]"} pending={!project.cvss} />
                 <MetaRow label="CWE" value={project.cwe || "[ berilmagan ]"} pending={!project.cwe} />
               </dl>
