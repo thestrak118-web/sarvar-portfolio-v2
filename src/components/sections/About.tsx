@@ -11,7 +11,7 @@ export function About({ index = "01" }: { index?: string }) {
         <SectionHeading
           index={index}
           eyebrow="Men haqimda"
-          title="Hujumlar ortida."
+          title="Attack'lar ortida."
           description="Ish aslida nimadan iborat — motivatsion gaplarsiz, to'qib chiqarilgan tarixsiz."
         />
 
@@ -30,9 +30,10 @@ export function About({ index = "01" }: { index?: string }) {
             <Reveal delay={0.2}>
               <div className="mt-10 flex flex-wrap gap-x-8 gap-y-4 border-t border-line pt-8">
                 {[
-                  ["Offensive security", "Avval attack surface"],
-                  ["Linux", "Kali · kundalik tizim"],
-                  ["Hisobot", "Tuzatadigan muhandis uchun"],
+                  ["Offensive first", "Avval attack surface, keyin tool"],
+                  ["Proof over claim", "Har bir topilma PoC bilan"],
+                  ["Kali daily driver", "Linux · Python · Bash · Go"],
+                  ["Reporting", "Fix qiladigan muhandis uchun yoziladi"],
                 ].map(([title, detail]) => (
                   <div key={title}>
                     <p className="text-[14px] font-medium text-fg">{title}</p>

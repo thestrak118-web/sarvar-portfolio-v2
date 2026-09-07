@@ -88,7 +88,7 @@
         {
           "no": "07",
           "title": "Impact",
-          "objective": "Compromise tajovuzkor uchun nimani anglatadi: ma'lumot, lateral movement, persistence va biznes oqibati.",
+          "objective": "Compromise attacker uchun nimani anglatadi: ma'lumot, lateral movement, persistence va biznes oqibati.",
           "content": "",
           "points": []
         },
@@ -191,7 +191,7 @@
         {
           "no": "07",
           "title": "Impact",
-          "objective": "Compromise tajovuzkor uchun nimani anglatadi: ma'lumot, lateral movement, persistence va biznes oqibati.",
+          "objective": "Compromise attacker uchun nimani anglatadi: ma'lumot, lateral movement, persistence va biznes oqibati.",
           "content": "",
           "points": []
         },
@@ -227,7 +227,7 @@
       "codename": "",
       "category": "Reporting",
       "targetType": "MITRE ATT&CK · OWASP Top 10 · Cyber Kill Chain",
-      "summary": "Har bir engagement uchun hujumchi TTP'larini MITRE ATT&CK texnikalariga bog'lash, risk reytingini belgilash va hisobotni real threat actor konteksti bilan boyitish. Tuzilma OWASP Top 10 va Cyber Kill Chain asosida.",
+      "summary": "Har bir engagement uchun attacker TTP'larini MITRE ATT&CK texnikalariga bog'lash, risk reytingini belgilash va hisobotni real threat actor konteksti bilan boyitish. Tuzilma OWASP Top 10 va Cyber Kill Chain asosida.",
       "cover": "",
       "tags": [
         "REPORTING",
@@ -292,7 +292,7 @@
         {
           "no": "07",
           "title": "Impact",
-          "objective": "Compromise tajovuzkor uchun nimani anglatadi: ma'lumot, lateral movement, persistence va biznes oqibati.",
+          "objective": "Compromise attacker uchun nimani anglatadi: ma'lumot, lateral movement, persistence va biznes oqibati.",
           "content": "",
           "points": []
         },

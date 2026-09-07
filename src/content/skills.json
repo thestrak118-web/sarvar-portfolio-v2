@@ -50,7 +50,7 @@
       "id": "recon",
       "code": "RECON",
       "name": "Recon & Enumeration",
-      "caption": "Nishon nimani ko'rsatayotganini bilmasdan hujum boshlanmaydi.",
+      "caption": "Nishon nimani ko'rsatayotganini bilmasdan attack boshlanmaydi.",
       "capabilities": [
         {
           "name": "Attack Surface Mapping",
@@ -277,7 +277,7 @@
       },
       {
         "name": "Attack Surface Mapping",
-        "detail": "Nima hujum qilinadi"
+        "detail": "Nima attack qilinadi"
       },
       {
         "name": "Hypothesis",

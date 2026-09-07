@@ -64,7 +64,7 @@
         },
         {
           "title": "Metodika va hisobot",
-          "detail": "Har bir assessment OWASP Top 10 va Cyber Kill Chain asosida tuzilgan; hujumchi TTP'lari MITRE ATT&CK texnikalariga bog'lanib, hisobot real threat actor konteksti va risk reytingi bilan boyitilgan."
+          "detail": "Har bir assessment OWASP Top 10 va Cyber Kill Chain asosida tuzilgan; attacker TTP'lari MITRE ATT&CK texnikalariga bog'lanib, hisobot real threat actor konteksti va risk reytingi bilan boyitilgan."
         }
       ],
       "tags": [
