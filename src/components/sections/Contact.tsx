@@ -1,7 +1,7 @@
 import { profile } from "@/data/profile";
 import { Reveal } from "@/components/ui/Reveal";
 import { ActionLink } from "@/components/ui/ActionLink";
-import { DocumentIcon, GitHubIcon, LinkedInIcon, MailIcon } from "@/components/ui/Icons";
+import { DocumentIcon, GitHubIcon, LinkedInIcon, MailIcon, TelegramIcon } from "@/components/ui/Icons";
 
 export function Contact({ index = "" }: { index?: string }) {
   return (
@@ -45,6 +45,7 @@ export function Contact({ index = "" }: { index?: string }) {
             >
               Email
             </ActionLink>
+            <ActionLink link={profile.links.telegram} icon={<TelegramIcon className="size-4" />} />
             <ActionLink link={profile.links.cv} icon={<DocumentIcon className="size-4" />} />
             <ActionLink link={profile.links.github} icon={<GitHubIcon className="size-4" />} />
             <ActionLink link={profile.links.linkedin} icon={<LinkedInIcon className="size-4" />} />

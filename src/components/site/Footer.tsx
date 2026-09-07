@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { profile } from "@/data/profile";
-import { DocumentIcon, GitHubIcon, LinkedInIcon, MailIcon } from "@/components/ui/Icons";
+import { DocumentIcon, GitHubIcon, LinkedInIcon, MailIcon, TelegramIcon } from "@/components/ui/Icons";
 import { IconAction } from "@/components/ui/ActionLink";
 
 export function Footer() {
@@ -25,6 +25,9 @@ export function Footer() {
             </IconAction>
             <IconAction link={profile.links.linkedin} label="LinkedIn profili">
               <LinkedInIcon />
+            </IconAction>
+            <IconAction link={profile.links.telegram} label="Telegram">
+              <TelegramIcon />
             </IconAction>
             <IconAction link={profile.links.cv} label="CV (PDF) yuklab olish">
               <DocumentIcon />

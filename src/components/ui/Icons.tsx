@@ -28,6 +28,14 @@ export function LinkedInIcon({ className = "size-4", ...rest }: IconProps) {
   );
 }
 
+export function TelegramIcon({ className = "size-4", ...rest }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden {...rest}>
+      <path d="M21.94 4.3 18.7 19.6c-.24 1.08-.88 1.35-1.79.84l-4.94-3.64-2.38 2.3c-.27.26-.49.48-1 .48l.35-5.03 9.15-8.27c.4-.35-.09-.55-.62-.2L6.16 13.2 1.29 11.7c-1.06-.33-1.08-1.06.22-1.57L20.57 2.8c.88-.33 1.65.2 1.37 1.5Z" />
+    </svg>
+  );
+}
+
 export function MailIcon({ className = "size-4", ...rest }: IconProps) {
   return (
     <svg {...base} className={className} {...rest}>

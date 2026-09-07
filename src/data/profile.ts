@@ -30,6 +30,7 @@ export const profile = {
     } as ExternalLink,
     htb: { label: "Hack The Box", href: links.htb, handle: "" } as ExternalLink,
     cv: { label: "CV (PDF)", href: links.cv, handle: "" } as ExternalLink,
+    telegram: { label: "Telegram", href: links.telegram, handle: "@tolipovsec" } as ExternalLink,
   },
 };
 
