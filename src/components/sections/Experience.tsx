@@ -1,6 +1,7 @@
 import {
   engagements,
   engagementNote,
+  isOngoing,
   experienceHeading,
   experienceDescription,
   hasConfidential,
@@ -29,19 +30,27 @@ export function Experience({ index = "02" }: { index?: string }) {
           }
         />
 
+        {engagementNote ? (
+          <Reveal>
+            <p className="mt-6 max-w-2xl text-[13.5px] leading-relaxed text-dim">{engagementNote}</p>
+          </Reveal>
+        ) : null}
+
         {engagements.length === 0 ? <EmptyState hint="Ish tajribasi bo'limi" /> : null}
 
         <div className="mt-16">
           {engagements.map((job) => (
-            <article key={job.role} className="relative">
+            <article key={`${job.organisation}-${job.role}`} className="relative">
               <div className="flex flex-col gap-10">
                 <div>
                   <Reveal>
                     <div>
-                      <div className="flex items-center gap-3">
-                        <span className="label text-acid/80">Hozirgi</span>
-                        <span className="h-px w-10 bg-line" aria-hidden />
-                      </div>
+                      {isOngoing(job) ? (
+                        <div className="flex items-center gap-3">
+                          <span className="label text-acid/80">Hozirgi</span>
+                          <span className="h-px w-10 bg-line" aria-hidden />
+                        </div>
+                      ) : null}
 
                       <h3 className="mt-4 text-[26px] font-semibold leading-tight tracking-tight text-fg">
                         {job.role}
@@ -77,16 +86,13 @@ export function Experience({ index = "02" }: { index?: string }) {
                         </div>
                       </div>
 
-                      <div className="mt-6 flex flex-wrap gap-2">
-                        <Tag>Web</Tag>
-                        <Tag>Network</Tag>
-                        <Tag>Linux</Tag>
-                        <Tag>Hisobot</Tag>
-                      </div>
-
-                      <p className="mt-6 max-w-sm text-[13.5px] leading-relaxed text-dim">
-                        {engagementNote}
-                      </p>
+                      {job.tags && job.tags.length > 0 ? (
+                        <div className="mt-6 flex flex-wrap gap-2">
+                          {job.tags.map((t) => (
+                            <Tag key={t}>{t}</Tag>
+                          ))}
+                        </div>
+                      ) : null}
                     </div>
                   </Reveal>
                 </div>

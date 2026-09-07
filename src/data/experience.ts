@@ -11,9 +11,16 @@ export type Engagement = {
   confidential: boolean;
   summary: string;
   areas: { title: string; detail: string }[];
+  /** yorliqlar — kontentdan keladi, komponentda qattiq yozilmaydi */
+  tags?: string[];
 };
 
 export const engagements: Engagement[] = raw.engagements;
+
+/** "Hozirgi" yorlig'i faqat davri hali tugamagan engagement uchun. */
+export function isOngoing(job: Engagement): boolean {
+  return /hozirgacha|hozirgi|present/i.test(job.period);
+}
 export const engagementNote: string = raw.note;
 export const experienceHeading: string = raw.heading;
 export const experienceDescription: string = raw.description;

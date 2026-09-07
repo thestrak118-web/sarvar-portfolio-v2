@@ -191,6 +191,12 @@ export function Navigation() {
                 <IconAction link={profile.links.linkedin} label="LinkedIn profili">
                   <LinkedInIcon />
                 </IconAction>
+                <IconAction link={profile.links.telegram} label="Telegram">
+                  <TelegramIcon />
+                </IconAction>
+                <IconAction link={profile.links.cv} label="CV (PDF) yuklab olish">
+                  <DocumentIcon />
+                </IconAction>
                 <span className="label ml-auto">{profile.roleLine}</span>
               </div>
             </div>

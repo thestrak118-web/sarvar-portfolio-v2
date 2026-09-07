@@ -166,6 +166,7 @@ export const sections: Section[] = [
           { key: "mode", label: "Davomiylik qatori", type: "text" },
           { key: "confidential", label: "NDA belgisi ko'rsatilsin", type: "boolean" },
           { key: "summary", label: "Umumiy tavsif", type: "textarea", rows: 4 },
+          { key: "tags", label: "Teglar", type: "strings", hint: "Har biri alohida qatorda: Web, API, Cloud, QA..." },
           {
             key: "areas",
             label: "Ish yo'nalishlari",

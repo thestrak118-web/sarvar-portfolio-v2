@@ -31,6 +31,13 @@
           "title": "QA / sifat nazorati",
           "detail": "20+ yirik veb-sayt va admin dashboard uchun funksional, regressiya va UI testlash; 90+ reliz ishga tushirishdan oldin test qilinib tasdiqlandi. Test-case'lar tuzildi, QA jarayoniga xavfsizlik tekshiruvi (input validatsiya, ruxsatlar, sessiya boshqaruvi) qo'shildi."
         }
+      ],
+      "tags": [
+        "Web",
+        "API",
+        "Cloud",
+        "QA",
+        "Hisobot"
       ]
     },
     {
@@ -59,6 +66,12 @@
           "title": "Metodika va hisobot",
           "detail": "Har bir assessment OWASP Top 10 va Cyber Kill Chain asosida tuzilgan; hujumchi TTP'lari MITRE ATT&CK texnikalariga bog'lanib, hisobot real threat actor konteksti va risk reytingi bilan boyitilgan."
         }
+      ],
+      "tags": [
+        "Web",
+        "Network",
+        "Linux",
+        "Privesc"
       ]
     },
     {
@@ -73,7 +86,7 @@
       "areas": [
         {
           "title": "Tarmoq va host xavfsizligi",
-          "detail": "Tarmoq xavfsizligi asoslari, Active Directory muhitini tekshirish va hostlarni qattiqlashtirsh."
+          "detail": "Tarmoq xavfsizligi asoslari, Active Directory muhitini tekshirish va hostlarni qattiqlashtirish."
         },
         {
           "title": "Web ilova xavfsizligi",
@@ -87,6 +100,12 @@
           "title": "Skripting",
           "detail": "Python va Bash yordamida xavfsizlik vazifalarini avtomatlashtirish."
         }
+      ],
+      "tags": [
+        "Tarmoq",
+        "Web",
+        "SIEM",
+        "Active Directory"
       ]
     }
   ],
