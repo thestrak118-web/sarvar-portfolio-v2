@@ -121,7 +121,9 @@ export function Navigation() {
           ) : null}
 
           <div className="flex items-center gap-2">
-            <div className="hidden items-center gap-2 sm:flex">
+            {/* Bosh sahifada hamburger yo'q — ikonkalar mobilda ham ko'rinsin, aks holda
+                telefonda GitHub/LinkedIn/Telegram/CV ga yo'l qolmaydi. */}
+            <div className={cn("items-center gap-2", standalone ? "hidden sm:flex" : "flex")}>
               <IconAction link={profile.links.github} label="GitHub profili">
                 <GitHubIcon />
               </IconAction>
@@ -197,7 +199,7 @@ export function Navigation() {
                 <IconAction link={profile.links.cv} label="CV (PDF) yuklab olish">
                   <DocumentIcon />
                 </IconAction>
-                <span className="label ml-auto">{profile.roleLine}</span>
+                <span className="label ml-auto max-w-[45%] truncate text-right">{profile.roleLine}</span>
               </div>
             </div>
           </motion.div>

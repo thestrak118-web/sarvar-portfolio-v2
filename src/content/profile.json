@@ -9,7 +9,7 @@
   "availability": "ASOS IT'da QA va kiberxavfsizlik yo'nalishida ishlayman; yangi takliflarga ochiqman",
   "available": true,
   "experience": "1 yil",
-  "certification": "HTB CPTS · HAAD Red-0",
+  "certification": "HAAD Red-0",
   "machines": "20+",
   "securityProjects": "10+",
   "headlineLine1": "Xavfsizlik — bu funksiya emas.",
@@ -35,7 +35,7 @@
     },
     {
       "key": "Sertifikat",
-      "value": "HTB CPTS · HAAD Red-0"
+      "value": "HAAD Red-0"
     },
     {
       "key": "Joylashuv",
@@ -120,16 +120,16 @@
       "detail": "Penetration testing"
     },
     {
-      "value": 2,
+      "value": 1,
       "suffix": "",
       "label": "Sertifikat",
-      "detail": "CPTS · HAAD Red-0"
+      "detail": "HAAD Red-0"
     },
     {
-      "value": 3,
+      "value": 4,
       "suffix": "",
       "label": "Sertifikat jarayonda",
-      "detail": "SWES · CDSA · Security+"
+      "detail": "CPTS · SWES · CDSA · Security+"
     }
   ],
   "nameLine1": "SARVAR",
