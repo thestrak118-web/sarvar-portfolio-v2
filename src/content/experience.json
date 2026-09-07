@@ -2,12 +2,44 @@
   "note": "Har bir engagement professional pentest hisoboti bilan hujjatlashtirilgan: qayta takrorlash qadamlari, MITRE ATT&CK bog'lanishi va remediation tavsiyalari.",
   "engagements": [
     {
+      "organisation": "ASOS IT",
+      "organisationPending": false,
+      "role": "QA Engineer & Penetration Tester",
+      "period": "Aprel 2026 — hozirgacha",
+      "periodPending": false,
+      "mode": "To'liq stavka · 5 oy",
+      "confidential": false,
+      "summary": "Production muhitidagi mahsulotlar ustidan tashqi penetration testing va QA. 10+ real loyiha PTES / OWASP WSTG bo'yicha test qilindi; topilmalar orasida CVSS 9.8 darajali, autentifikatsiyasiz to'liq platforma egallash zanjirlari bor. Mijoz nomlari va nishon manzillari oshkor qilinmaydi.",
+      "areas": [
+        {
+          "title": "Production pentest (10+ loyiha)",
+          "detail": "Black-box → authenticated tashqi testlar PTES va OWASP WSTG bosqichlari bo'yicha: recon, enumeration, ekspluatatsiya, post-exploitation. Har bir engagement yozma ruxsat, ROE va vaqt muhrli qaydlar bilan olib borildi."
+        },
+        {
+          "title": "SaaS platformasi + AWS EC2 auditi",
+          "detail": "3 Critical (CVSS 9.1–9.8), 4 Medium va 6 Info topilma. Autentifikatsiyasiz to'liq egallash zanjiri jonli isbotlandi: catch-all route orqali manba kod va .env oshkorligi → JWT imzo kalitini tiklash → SuperAdmin token yasash → himoyalangan admin endpointlariga kirish. Shuningdek butun ma'lumotlar bazasini auth'siz yuklab olish, qayta ishlatilgan JWT sekreti va jonli API kalitlari oshkorligi aniqlandi."
+        },
+        {
+          "title": "Ta'lim / qabul platformasi",
+          "detail": "OTP tasdiqlashni chetlab o'tish orqali account takeover (CVSS 9.8) — faqat telefon raqami bilan istalgan akkaunt egallanardi. Qo'shimcha: doimiy kirish beruvchi token sizishi, shaxsni tasdiqlovchi hujjatlarga nazoratsiz kirish, parol xeshlarining oshkorligi va user enumeration."
+        },
+        {
+          "title": "Negative results va hisobot",
+          "detail": "SQLi, IDOR, path traversal/LFI, SSRF, JWT alg-confusion, command injection va file-upload → RCE tizimli sinalib rad etildi hamda hisobotda negative results sifatida hujjatlashtirildi. Har bir engagement CVSS 3.1 bahosi, executive summary, attack walkthrough, proof of access, tuzatish rejasi va cleanup statement bilan yakunlanib, retest o'tkazildi."
+        },
+        {
+          "title": "QA / sifat nazorati",
+          "detail": "20+ yirik veb-sayt va admin dashboard uchun funksional, regressiya va UI testlash; 90+ reliz ishga tushirishdan oldin test qilinib tasdiqlandi. Test-case'lar tuzildi, QA jarayoniga xavfsizlik tekshiruvi (input validatsiya, ruxsatlar, sessiya boshqaruvi) qo'shildi."
+        }
+      ]
+    },
+    {
       "organisation": "Mustaqil xavfsizlik tadqiqoti (Self-Directed Security Research)",
       "organisationPending": false,
       "role": "Independent Penetration Testing",
-      "period": "2024 — hozirgacha",
+      "period": "2025 — hozirgacha",
       "periodPending": false,
-      "mode": "1+ yil amaliy tajriba",
+      "mode": "1 yil amaliy tajriba",
       "confidential": false,
       "summary": "HackTheBox, TryHackMe va VulNyx platformalarida 20+ mashinada to'liq qamrovli penetration test. Har bir engagement threat intelligence konteksti, MITRE ATT&CK bog'lanishi, risk baholash va remediation tavsiyalari bilan professional hisobotga aylantirilgan.",
       "areas": [
@@ -33,7 +65,7 @@
       "organisation": "HAAD Training Center",
       "organisationPending": false,
       "role": "Cybersecurity Professional Program",
-      "period": "Noyabr 2025 — Iyun 2026",
+      "period": "Sentabr 2025 — Iyun 2026",
       "periodPending": false,
       "mode": "Ta'lim dasturi",
       "confidential": false,
@@ -58,6 +90,6 @@
       ]
     }
   ],
-  "heading": "1+ yil offensive tomonda.",
-  "description": "Mustaqil tadqiqot va o'quv muhitlarida bajarilgan ishlar — metodika ham, natija ham ochiq."
+  "heading": "Offensive security — ish joyida va mustaqil.",
+  "description": "ASOS IT'dagi production engagement'lar va mustaqil tadqiqot — metodika ham, natija ham hujjatlashtirilgan."
 }

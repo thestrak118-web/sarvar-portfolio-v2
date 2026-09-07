@@ -6,24 +6,24 @@
   "roleLine": "Penetration Tester / Cybersecurity",
   "location": "Tashkent, Uzbekistan",
   "photo": "/uploads/sarvar-portrait.webp",
-  "availability": "Kiberxavfsizlik bo'yicha takliflarga ochiqman",
+  "availability": "ASOS IT'da QA va kiberxavfsizlik yo'nalishida ishlayman; yangi takliflarga ochiqman",
   "available": true,
-  "experience": "1+ yil",
+  "experience": "1 yil",
   "certification": "HTB CPTS · HAAD Red-0",
   "machines": "20+",
-  "securityProjects": "5+",
+  "securityProjects": "10+",
   "headlineLine1": "Xavfsizlik — bu funksiya emas.",
   "headlineLine2": "Bu — attack surface.",
   "intro": "Web application & network penetration testing, vulnerability research va security automation bilan shug'ullanaman.",
   "bio": [
-    "Men xavfsizlikning hujum tomonida ishlayman: attack surface'ni xaritaga tushiraman, tajovuzkor undan amalda nima qila olishini isbotlayman va tuzatish yo'li aniq bo'ladigan qilib hisobot yozaman. 1+ yil amaliy tajriba, HackTheBox, TryHackMe va VulNyx'da 20+ mashina.",
-    "Har bir engagement OWASP Top 10 va Cyber Kill Chain asosida tuzilib, professional pentest hisoboti bilan yakunlanadi: qayta takrorlash qadamlari, MITRE ATT&CK bog'lanishi, risk reytingi va remediation tavsiyalari. Amalda ekspluatatsiya qilingan sinflar orasida Memcached credential leakage, file upload bypass, Python module hijacking, LFI + log poisoning, KeePass cracking va GTFOBins SUID/sudo privilege escalation bor.",
-    "Ishning ikkinchi yarmi — muhandislik. Wordlist generatsiyasi, service fingerprinting va exploit zanjirini Python va Bash bilan avtomatlashtiraman; bu qo'lda enumeration vaqtini ~4 soatdan 90 daqiqadan kamgacha qisqartirdi."
+    "Men xavfsizlikning hujum tomonida ishlayman: attack surface'ni xaritaga tushiraman, tajovuzkor undan amalda nima qila olishini isbotlayman va tuzatish yo'li aniq bo'ladigan qilib hisobot yozaman. ASOS IT'da production muhitidagi 10+ real loyiha test qilingan; bundan tashqari HackTheBox, TryHackMe va VulNyx'da 20+ mashina.",
+    "Topilmalar orasida CVSS 9.8 darajali, autentifikatsiyasiz to'liq platforma egallash zanjirlari bor — manba kod va .env oshkorligidan JWT imzo kalitini tiklab SuperAdmin tokeni yasashgacha, OTP'ni chetlab o'tib account takeover'gacha. Har bir engagement PTES / OWASP WSTG bo'yicha tuzilib, CVSS 3.1 bahosi, attack walkthrough, MITRE ATT&CK bog'lanishi va remediation rejasi bilan yakunlanadi.",
+    "Nima topilmagani ham hisobotga kiradi: SQLi, IDOR, traversal, SSRF, JWT alg-confusion va RCE tizimli sinalib rad etilsa, bu negative results sifatida yoziladi. Ishning ikkinchi yarmi — muhandislik: recon va enumeration Python, Bash va Go bilan avtomatlashtiriladi; bu qo'lda enumeration vaqtini ~4 soatdan 90 daqiqadan kamgacha qisqartirdi."
   ],
   "spec": [
     {
       "key": "Lavozim",
-      "value": "Penetration Tester"
+      "value": "QA Engineer & Penetration Tester"
     },
     {
       "key": "Yo'nalish",
@@ -31,7 +31,7 @@
     },
     {
       "key": "Tajriba",
-      "value": "1+ yil"
+      "value": "1 yil · ASOS IT"
     },
     {
       "key": "Sertifikat",
@@ -90,6 +90,18 @@
   ],
   "statistics": [
     {
+      "value": 10,
+      "suffix": "+",
+      "label": "Real production loyiha",
+      "detail": "ASOS IT engagement'lari"
+    },
+    {
+      "value": 3,
+      "suffix": "",
+      "label": "Critical topilma (CVSS 9.1–9.8)",
+      "detail": "bitta auditda"
+    },
+    {
       "value": 20,
       "suffix": "+",
       "label": "Mashina va lab",
@@ -103,7 +115,7 @@
     },
     {
       "value": 1,
-      "suffix": "+",
+      "suffix": "",
       "label": "Yil amaliy tajriba",
       "detail": "Penetration testing"
     },

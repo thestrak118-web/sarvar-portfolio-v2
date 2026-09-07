@@ -193,11 +193,79 @@
           ]
         }
       ]
+    },
+    {
+      "id": "infra",
+      "code": "INFRA",
+      "name": "Infrastructure & Cloud",
+      "caption": "Ilova qayerda turganini bilmasdan uning xavfsizligi baholanmaydi.",
+      "capabilities": [
+        {
+          "name": "Cloud",
+          "tools": [
+            "AWS EC2",
+            "GCP IAM / service-account audit"
+          ]
+        },
+        {
+          "name": "Konteyner",
+          "tools": [
+            "Docker",
+            "Konteyner izolyatsiyasi"
+          ]
+        },
+        {
+          "name": "Server & tarmoq",
+          "tools": [
+            "Linux",
+            "nginx",
+            "TLS / CDN konfiguratsiyasi"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "qa",
+      "code": "QA",
+      "name": "QA & Release Testing",
+      "caption": "Reliz chiqishdan oldin — xatolik ham, xavfsizlik ham tekshiriladi.",
+      "capabilities": [
+        {
+          "name": "Funksional testlash",
+          "tools": [
+            "Funksional",
+            "Regressiya",
+            "UI"
+          ]
+        },
+        {
+          "name": "Test hujjatlari",
+          "tools": [
+            "Test-case yozish",
+            "Bug reporting"
+          ]
+        },
+        {
+          "name": "Reliz nazorati",
+          "tools": [
+            "Reliz oldi tekshiruvi",
+            "Retest"
+          ]
+        },
+        {
+          "name": "Security in QA",
+          "tools": [
+            "Input validatsiya",
+            "Ruxsatlar",
+            "Sessiya boshqaruvi"
+          ]
+        }
+      ]
     }
   ],
   "methodology": {
     "title": "METHODOLOGY",
-    "caption": "Tasodifiy tool ishga tushirish emas — har bir engagement shu ketma-ketlikda boradi.",
+    "caption": "Tasodifiy tool ishga tushirish emas — har bir engagement PTES va OWASP WSTG bo'yicha shu ketma-ketlikda boradi.",
     "steps": [
       {
         "name": "Recon",
@@ -229,7 +297,7 @@
       },
       {
         "name": "Reporting",
-        "detail": "MITRE ATT&CK + remediation"
+        "detail": "CVSS 3.1 · MITRE ATT&CK · remediation"
       }
     ]
   }

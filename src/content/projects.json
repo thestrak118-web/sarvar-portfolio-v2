@@ -1,9 +1,126 @@
 {
-  "note": "Har bir engagement professional pentest hisoboti bilan hujjatlashtirilgan. Quyidagi case study'lar bosqichma-bosqich to'ldirilib boriladi.",
+  "note": "Har bir engagement professional pentest hisoboti bilan hujjatlashtirilgan. Mijoz loyihalarida nom, domen va IP manzillar shartnoma bo'yicha oshkor qilinmaydi.",
   "items": [
     {
-      "slug": "htb-thm-vulnyx-assessments",
+      "slug": "saas-aws-external-assessment",
       "index": "01",
+      "title": "SaaS platformasi + AWS EC2 — tashqi penetration test",
+      "codename": "",
+      "category": "Production engagement",
+      "targetType": "Web application · AWS EC2 (mijoz oshkor qilinmaydi)",
+      "summary": "Ikkita production ilova va ularni ko'tarib turgan AWS EC2 serveri ustidan tashqi (black-box → authenticated) test. Natija: 3 Critical (CVSS 9.1–9.8), 4 Medium, 6 Info. Autentifikatsiyasiz to'liq platforma egallash zanjiri jonli isbotlandi — manba kod va .env oshkorligidan SuperAdmin darajasigacha. Mijoz nomi, domenlar va IP manzillar shartnoma bo'yicha oshkor qilinmaydi.",
+      "cover": "",
+      "tags": [
+        "WEB",
+        "API",
+        "CLOUD",
+        "AUTH",
+        "DISCLOSURE",
+        "REPORTING"
+      ],
+      "severity": "critical",
+      "cvss": "9.8",
+      "cwe": "CWE-538 · CWE-798 · CWE-522",
+      "status": "Yopiq (retest bajarilgan)",
+      "difficulty": "",
+      "tools": [
+        "nmap",
+        "ffuf",
+        "Burp Suite",
+        "curl",
+        "jq",
+        "PyJWT",
+        "openssl",
+        "sqlite3"
+      ],
+      "mitre": [],
+      "vulnerabilities": [
+        "Manba kod va .env oshkorligi (catch-all route)",
+        "JWT imzo kalitini tiklash → SuperAdmin token forge",
+        "Butun ma'lumotlar bazasini auth'siz yuklab olish",
+        "Qayta ishlatilgan / zaif JWT sekreti",
+        "Auth token URL query parametrida",
+        "Klient boshqaradigan IDOR sirti",
+        "Jonli tashqi API kalitlari oshkorligi"
+      ],
+      "chapters": [
+        {
+          "no": "01",
+          "title": "Target",
+          "objective": "Qamrov, ROE va muvaffaqiyat mezoni: ikki ilova, bitta EC2 origin; DoS va brute-force taqiqlangan, mijoz PII chiqarib olinmaydi.",
+          "content": "Engagement yozma ruxsat bilan boshlandi. Maqsad — tashqi hujumchi nuqtai nazaridan super-admin va server darajasiga chiqish yo'lini aniqlash va isbotlash.",
+          "points": []
+        },
+        {
+          "no": "02",
+          "title": "Reconnaissance",
+          "objective": "Subdomen va DNS enumeration, TLS/CDN holati, to'liq port skani.",
+          "content": "Sertifikat shaffofligi jurnallari orqali subdomenlar yig'ildi; 65535 TCP portning to'liq skani va xizmat/versiya aniqlash bajarildi.",
+          "points": []
+        },
+        {
+          "no": "03",
+          "title": "Enumeration",
+          "objective": "Content discovery, JS bundle tahlili va route xaritasi.",
+          "content": "ffuf bilan fayl-oshkorlik yuzasi topildi; frontend bundle'idan API route xaritasi tiklandi va statik manba kod tahlil qilindi.",
+          "points": []
+        },
+        {
+          "no": "04",
+          "title": "Initial Access",
+          "objective": "Autentifikatsiyasiz oshkor qilingan konfiguratsiya fayllari.",
+          "content": "Ilova ildizidagi catch-all route istalgan faylni uzatar edi — .env, manba kod va konteyner konfiguratsiyasi hech qanday autentifikatsiyasiz olindi.",
+          "points": []
+        },
+        {
+          "no": "05",
+          "title": "Exploitation",
+          "objective": "Sekret qayta ishlatilishidan SuperAdmin tokenigacha zanjir.",
+          "content": "Muhit o'zgaruvchisidagi parol aynan JWT imzo kaliti sifatida ishlatilardi. Shu kalit bilan SuperAdmin roli uchun token imzolandi va barcha himoyalangan endpointlar uni qabul qildi — parolsiz, loginsiz to'liq platforma nazorati.",
+          "points": []
+        },
+        {
+          "no": "06",
+          "title": "Privilege Escalation",
+          "objective": "OS-daraja tahlili.",
+          "content": "OS-root tashqi hujum sirtidan erishib bo'lmasligi ko'rsatildi: RCE, traversal, SSRF va konteyner izolyatsiyasi sinalib rad etildi. Server-daraja faqat qonuniy SSH kaliti bilan.",
+          "points": []
+        },
+        {
+          "no": "07",
+          "title": "Impact",
+          "objective": "Biznes oqibati.",
+          "content": "Zanjir OS-root bo'lmasa ham butun mahsulotni, barcha mijoz ma'lumotini va jonli tashqi API kalitlarini hujumchi ixtiyoriga berardi — bitta serverdagi root'dan og'irroq biznes oqibati.",
+          "points": []
+        },
+        {
+          "no": "08",
+          "title": "Remediation",
+          "objective": "Ustuvorlashtirilgan tuzatish rejasi va retest.",
+          "content": "Zudlik bilan: barcha kalitlar rotatsiyasi, catch-all route'ni oq ro'yxatga cheklash, JWT sekretini alohida ≥32 baytli tasodifiy qiymatga o'tkazish. Tuzatishdan so'ng retest o'tkazildi.",
+          "points": []
+        }
+      ],
+      "screenshots": [
+        {
+          "caption": "Fayl-oshkorlik — so'rov/javob",
+          "src": ""
+        },
+        {
+          "caption": "Forge qilingan token bilan admin kirish",
+          "src": ""
+        },
+        {
+          "caption": "Risk taqsimoti",
+          "src": ""
+        }
+      ],
+      "reportUrl": "",
+      "githubUrl": ""
+    },
+    {
+      "slug": "htb-thm-vulnyx-assessments",
+      "index": "02",
       "title": "20+ mashina bo'yicha penetration test",
       "codename": "",
       "category": "CTF / lab engagement",
@@ -119,7 +236,7 @@
     },
     {
       "slug": "security-automation-scripts",
-      "index": "02",
+      "index": "03",
       "title": "Engagement avtomatlashtirish skriptlari",
       "codename": "",
       "category": "Security tooling",
@@ -222,7 +339,7 @@
     },
     {
       "slug": "threat-intelligence-reporting",
-      "index": "03",
+      "index": "04",
       "title": "Threat intelligence va hisobot",
       "codename": "",
       "category": "Reporting",
