@@ -59,14 +59,34 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="uz" className={`${inter.variable} ${mono.variable} bg-void antialiased`}>
+    <html
+      lang="uz"
+      className={`${inter.variable} ${mono.variable} bg-void antialiased`}
+    >
       <body className="bg-void text-fg">
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-          "@context": "https://schema.org", "@type": "Person", name: profile.name,
-          url: siteUrl, image: `${siteUrl}${profile.photo}`, jobTitle: profile.role,
-          sameAs: [profile.links.github.href, profile.links.linkedin.href, profile.links.telegram.href],
-          knowsAbout: ["Penetration testing", "Web application security", "Security automation"],
-        }).replace(/</g, "\\u003c") }} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: profile.name,
+              url: siteUrl,
+              image: `${siteUrl}${profile.photo}`,
+              jobTitle: profile.role,
+              sameAs: [
+                profile.links.github.href,
+                profile.links.linkedin.href,
+                profile.links.telegram.href,
+              ],
+              knowsAbout: [
+                "Penetration testing",
+                "Web application security",
+                "Security automation",
+              ],
+            }).replace(/</g, "\\u003c"),
+          }}
+        />
         {children}
       </body>
     </html>

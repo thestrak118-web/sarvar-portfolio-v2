@@ -84,12 +84,14 @@ try {
           path: `${output}/${width}-${route.replaceAll("/", "_")}-viewport.png`,
         });
         // Render offscreen sections for the full-page artifact, as scrolling does.
-        const screenshotStyle = await page.addStyleTag({ content: ".v2-band { content-visibility: visible !important; }" });
+        const screenshotStyle = await page.addStyleTag({
+          content: ".v2-band { content-visibility: visible !important; }",
+        });
         await page.screenshot({
           path: `${output}/${width}-${route.replaceAll("/", "_") || "home"}.png`,
           fullPage: true,
         });
-        await screenshotStyle.evaluate(element => element.remove());
+        await screenshotStyle.evaluate((element) => element.remove());
       }
       results.push({
         width,
