@@ -1,21 +1,25 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, JetBrains_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { profile } from "@/data/profile";
+import { siteUrl } from "@/lib/site-metadata";
 
-const inter = Inter({
+const inter = localFont({
+  src: "../../public/fonts/inter-latin.woff2",
+  weight: "100 900",
   variable: "--font-inter",
-  subsets: ["latin"],
   display: "swap",
 });
 
-const mono = JetBrains_Mono({
+const mono = localFont({
+  src: "../../public/fonts/jetbrains-mono-latin.woff2",
+  weight: "400",
   variable: "--font-mono",
-  subsets: ["latin"],
   display: "swap",
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: {
     default: `${profile.name} — Penetration Tester / Cybersecurity`,
     template: `%s — ${profile.name}`,
@@ -30,7 +34,6 @@ export const metadata: Metadata = {
     "offensive security",
     "cybersecurity",
     "web application security",
-    "HTB CJCA",
     "MITRE ATT&CK",
     "red team",
     profile.name,
@@ -50,14 +53,22 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#050505",
+  themeColor: "#070907",
   colorScheme: "dark",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="uz" className={`${inter.variable} ${mono.variable} bg-void antialiased`}>
-      <body className="bg-void text-fg">{children}</body>
+      <body className="bg-void text-fg">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org", "@type": "Person", name: profile.name,
+          url: siteUrl, image: `${siteUrl}${profile.photo}`, jobTitle: profile.role,
+          sameAs: [profile.links.github.href, profile.links.linkedin.href, profile.links.telegram.href],
+          knowsAbout: ["Penetration testing", "Web application security", "Security automation"],
+        }).replace(/</g, "\\u003c") }} />
+        {children}
+      </body>
     </html>
   );
 }

@@ -1,17 +1,17 @@
-import { Navigation } from "@/components/site/Navigation";
-import { Footer } from "@/components/site/Footer";
-import { Ambience } from "@/components/site/Ambience";
-
-/** Chrome for the public site. The admin tool deliberately sits outside it. */
+import "@/app/portfolio.css";
+import { Header, ContactGate } from "@/components/portfolio/Interactive";
+import { Footer, Contact } from "@/components/portfolio/Portfolio";
 export default function SiteLayout({ children }: LayoutProps<"/">) {
   return (
-    <>
-      <Ambience />
-      <Navigation />
-      <main id="main" className="relative">
+    <div className="v2-site">
+      <Header />
+      <main id="main">
         {children}
+        <ContactGate>
+          <Contact />
+        </ContactGate>
       </main>
       <Footer />
-    </>
+    </div>
   );
 }

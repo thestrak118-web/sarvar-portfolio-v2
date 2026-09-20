@@ -1,18 +1,4 @@
-import type { Metadata } from "next";
-import { SecurityWork } from "@/components/sections/SecurityWork";
-
-export const metadata: Metadata = {
-  title: "Security Work",
-  description:
-    "Offensive Security UGC mashinalari va assessmentlar — har biri sakkiz bosqichli case study bilan.",
-};
-
-/** The work index always exists — it is the backbone of the portfolio. */
-export default function WorkPage() {
-  return (
-    <>
-      <div className="pt-16" />
-      <SecurityWork index="" />
-    </>
-  );
-}
+import { Work } from "@/components/portfolio/Portfolio";
+import { pageMetadata } from "@/lib/site-metadata";
+export const metadata = pageMetadata("Loyihalar", "Production auditlar, xavfsizlik avtomatizatsiyasi va maxfiy tafsilotlarsiz case studylar.", "/work");
+export default function Page() { return <Work page />; }

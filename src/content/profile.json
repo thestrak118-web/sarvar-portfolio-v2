@@ -12,8 +12,8 @@
   "certification": "HAAD Red-0",
   "machines": "20+",
   "securityProjects": "10+",
-  "headlineLine1": "Xavfsizlik — bu funksiya emas.",
-  "headlineLine2": "Bu — attack surface.",
+  "headlineLine1": "Zaiflikni topaman.",
+  "headlineLine2": "Ta’sirini isbotlayman.",
   "intro": "Web application & network penetration testing, vulnerability research va security automation bilan shug'ullanaman.",
   "bio": [
     "Men xavfsizlikning offensive tomonida ishlayman: attack surface'ni xaritaga tushiraman, attacker undan amalda nima qila olishini isbotlayman va tuzatish yo'li aniq bo'ladigan qilib hisobot yozaman. ASOS IT'da production muhitidagi 10+ real loyiha test qilingan; bundan tashqari HackTheBox, TryHackMe va VulNyx'da 20+ mashina.",

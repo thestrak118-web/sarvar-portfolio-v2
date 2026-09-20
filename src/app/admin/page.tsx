@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { readAllContent } from "@/app/api/admin/content/route";
+import { readAllContent } from "@/lib/admin-content";
 import { AdminApp } from "./AdminApp";
 
 export const dynamic = "force-dynamic";

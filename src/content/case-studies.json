@@ -1,0 +1,122 @@
+{
+  "items": [
+    {
+      "slug": "saas-security-assessment",
+      "title": "Ochiq koddan administrator huquqigacha.",
+      "category": "Production",
+      "role": "Penetration Tester · ASOS IT",
+      "period": "ASOS IT, 2026; auditning aniq sanasi yopiq",
+      "challenge": "SaaS platformasi va AWS EC2 muhitida tashqi foydalanuvchi imkoniyatlarini tekshirish.",
+      "result": "3 kritik topilma",
+      "summary": "Manba kodning oshkor bo'lishi, qayta ishlatilgan JWT sekreti va himoyasiz ma'lumotlar orqali platformani egallash zanjiri aniqlandi.",
+      "technologies": [
+        "Web / API",
+        "JWT",
+        "AWS EC2",
+        "PTES",
+        "OWASP WSTG"
+      ],
+      "flow": [
+        "Manba kod oshkorligi",
+        "JWT imzo kaliti",
+        "SuperAdmin tokeni",
+        "Admin API'ga kirish"
+      ],
+      "finding": "3 ta Critical (CVSS 9.1–9.8), 4 ta Medium va 6 ta Informational topilma qayd etilgan. Catch-all route orqali manba kod va konfiguratsiya oshkorligi administrator huquqiga olib kelgan.",
+      "cvss": "9.1–9.8",
+      "impact": "Autentifikatsiyasiz boshqaruv funksiyalariga va ma'lumotlarga kirish imkoniyati. Mijoz, endpoint, kalit va infratuzilma tafsilotlari ochiqlanmaydi.",
+      "evidenceLabel": "Audit xulosasi · maxfiy tafsilotlar chiqarilgan",
+      "evidence": [
+        "Critical: 3 / CVSS 9.1–9.8",
+        "Medium: 4 / Informational: 6",
+        "Isbotlangan ta'sir: administrator API'ga kirish",
+        "Manba: ASOS IT tajriba qaydlari"
+      ],
+      "remediation": [
+        "Tavsiya: manba kod va konfiguratsiyani ochiq route'lardan ajratish.",
+        "Tavsiya: oshkor bo'lgan kalitlarni almashtirish va tegishli tokenlarni bekor qilish.",
+        "Tavsiya: barcha ma'lumot va administrator endpointlarida server tomonda ruxsatni tekshirish."
+      ],
+      "outcome": "Topilmalar va tuzatish rejasi hisobotga kiritilgan. Ushbu auditga tegishli retest natijasi ochiq materiallarda berilmagan."
+    },
+    {
+      "slug": "security-automation-scripts",
+      "title": "Takroriy tekshiruvdan avtomatlashtirilgan jarayonga.",
+      "category": "Tooling",
+      "role": "Dasturchi va xavfsizlik tadqiqotchisi",
+      "period": "Mustaqil tadqiqot, 2025–hozirgacha",
+      "challenge": "Wordlist yaratish va servislarni aniqlashdagi takroriy qo'l mehnatini qisqartirish.",
+      "result": "~4 soat → 90 daqiqa",
+      "summary": "Python va Bash skriptlari enumeration jarayonini tezlashtirdi. Alohida recontool loyihasi Go yadrosi, Python modullari va HTML hisobotni birlashtiradi.",
+      "technologies": [
+        "Python",
+        "Bash",
+        "Go",
+        "Nmap",
+        "ffuf"
+      ],
+      "flow": [
+        "Ruxsatli domen",
+        "DNS va servislar",
+        "Probe / crawler / fuzz",
+        "JSON va HTML hisobot"
+      ],
+      "finding": "Shaxsiy enumeration jarayonidagi vaqt taxminan 4 soatdan 90 daqiqagacha qisqargan. Bu avvalgi tajriba qaydlaridagi kuzatuv; recontool uchun alohida nazoratli benchmark emas.",
+      "impact": "Takroriy yig'ish ishlari avtomatlashtiriladi; tahlil, topilmalarni qo'lda tasdiqlash va hisobot uchun vaqt qoladi.",
+      "evidenceLabel": "Haqiqiy CLI · lokal recontool --help chiqishidan parcha",
+      "evidence": [
+        "USAGE",
+        "  recontool <command> [options]",
+        "COMMANDS",
+        "  scan        Domenning attack surface'ini to'liq skanerlash",
+        "  serve       Skan natijalari (JSON/HTML) papkasini mahalliy HTTP orqali ko'rsatish",
+        "  version     Dastur versiyasi va build ma'lumotlarini ko'rsatish"
+      ],
+      "remediation": [
+        "Go yadrosi: subdomain discovery, HTTPS probe, crawler va hisobot.",
+        "Python moduli: APK tahlili uchun ko'prik; Bash va Python skriptlari alohida yordamchi ishlarni bajaradi.",
+        "Natijalar avtomatik yakuniy xulosa emas: topilmalar qo'lda tekshiriladi."
+      ],
+      "outcome": "Kod GitHub'da mavjud. Bu sahifada hech qanday nishonga skan yuborilmaydi; terminal parcha lokal yordam buyrug'idan olingan.",
+      "github": "https://github.com/thestrak118-web/recontool"
+    },
+    {
+      "slug": "authentication-assessment",
+      "title": "OTP tekshiruvidagi uzilish. Akkauntga to'liq kirish.",
+      "category": "Production",
+      "role": "Penetration Tester · ASOS IT",
+      "period": "ASOS IT, 2026; auditning aniq sanasi yopiq",
+      "challenge": "Ta'lim va qabul platformasida autentifikatsiya hamda shaxsiy ma'lumotlar himoyasini baholash.",
+      "result": "CVSS 9.8 / account takeover",
+      "summary": "OTP tasdiqlashni chetlab o'tish orqali akkauntni egallash va shaxsiy ma'lumotlarga nazoratsiz kirish aniqlandi.",
+      "technologies": [
+        "Authentication",
+        "API",
+        "Session management",
+        "OWASP WSTG"
+      ],
+      "flow": [
+        "Telefon identifikatori",
+        "OTP nazoratidagi uzilish",
+        "Akkauntga kirish",
+        "Ta'sirni hujjatlashtirish"
+      ],
+      "finding": "Telefon raqami asosida OTP tasdiqlashni chetlab o'tib akkauntni egallash mumkin bo'lgan (CVSS 9.8). Qo'shimcha ravishda token sizishi, hujjatlarga nazoratsiz kirish va foydalanuvchilarni aniqlash holatlari qayd etilgan.",
+      "cvss": "9.8",
+      "impact": "Foydalanuvchi akkaunti va shaxsni tasdiqlovchi hujjatlar maxfiyligiga ta'sir. Haqiqiy foydalanuvchi, telefon, token va so'rovlar ochiqlanmaydi.",
+      "evidenceLabel": "Audit xulosasi · maxfiy tafsilotlar chiqarilgan",
+      "evidence": [
+        "Topilma: OTP bypass → account takeover",
+        "Daraja: Critical / CVSS 9.8",
+        "Qo'shimcha: token va hujjatlar himoyasi",
+        "Manba: ASOS IT tajriba qaydlari"
+      ],
+      "remediation": [
+        "Tavsiya: OTP'ni server tomonida foydalanuvchi va sessiyaga bog'lab tekshirish.",
+        "Tavsiya: tokenlarning hayot sikli va bekor qilish mexanizmini tekshirish.",
+        "Tavsiya: shaxsiy hujjat va profil ma'lumotlariga ruxsatni har bir so'rovda nazorat qilish."
+      ],
+      "outcome": "Zaiflik va ta'sir hisobotda qayd etilgan. Aynan shu topilmaning tuzatilgani yoki retestdan o'tgani haqidagi ochiq dalil berilmagan."
+    }
+  ]
+}

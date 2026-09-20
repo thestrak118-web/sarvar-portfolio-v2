@@ -1,0 +1,9 @@
+{
+  "target": {
+    "domain": "example.com",
+    "scope": ["example.com"]
+  },
+  "subdomains": [],
+  "endpoints": [],
+  "findings": []
+}

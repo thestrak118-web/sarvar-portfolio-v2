@@ -39,6 +39,30 @@ const keyValueFields: Field[] = [
 
 export const sections: Section[] = [
   {
+    file: "case-studies", title: "V2 case studylar", description: "Tanlangan loyihalar, dalil manbalari va yakuniy holat. Faqat tekshirilgan faktlarni kiriting.",
+    fields: [{ key: "items", label: "Loyihalar", type: "objects", titleKey: "title", addLabel: "Loyiha qo'shish", fields: [
+      { key: "slug", label: "URL nomi", type: "text" },
+      { key: "title", label: "Sarlavha", type: "text" },
+      { key: "category", label: "Yo'nalish", type: "select", options: ["Production", "Tooling", "Lab", "Reporting"] },
+      { key: "role", label: "Rol", type: "text" },
+      { key: "period", label: "Davr", type: "text" },
+      { key: "challenge", label: "Vazifa", type: "textarea" },
+      { key: "result", label: "Asosiy natija", type: "text" },
+      { key: "summary", label: "Qisqa xulosa", type: "textarea" },
+      { key: "technologies", label: "Texnologiyalar", type: "strings" },
+      { key: "flow", label: "Jarayon bosqichlari", type: "strings" },
+      { key: "finding", label: "Asosiy topilma", type: "textarea" },
+      { key: "impact", label: "Ta'sir", type: "textarea" },
+      { key: "evidenceLabel", label: "Dalilning manbasi", type: "text" },
+      { key: "evidence", label: "Ochiq dalil qatorlari", type: "strings" },
+      { key: "remediation", label: "Tuzatish yoki arxitektura", type: "strings" },
+      { key: "outcome", label: "Yakuniy holat", type: "textarea" },
+      { key: "cvss", label: "CVSS", type: "text" },
+      { key: "github", label: "GitHub URL", type: "text" },
+      { key: "review", label: "Material tayyorlanmoqda", type: "boolean" },
+    ] }],
+  },
+  {
     file: "layout",
     title: "Sahifa tuzilishi",
     description:

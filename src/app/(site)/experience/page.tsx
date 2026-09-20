@@ -1,22 +1,4 @@
-import { notFound } from "next/navigation";
-import type { Metadata } from "next";
-import { Experience } from "@/components/sections/Experience";
-import { placeOf } from "@/data/layout";
-import { profile } from "@/data/profile";
-
-export const metadata: Metadata = {
-  title: "Experience",
-  description: profile.intro,
-};
-
-export default function ExperiencePage() {
-  // The section only owns a route while it is set to "alohida sahifa".
-  if (placeOf("experience") !== "page") notFound();
-
-  return (
-    <>
-      <div className="pt-16" />
-      <Experience index="" />
-    </>
-  );
-}
+import { Experience } from "@/components/portfolio/Portfolio";
+import { pageMetadata } from "@/lib/site-metadata";
+export const metadata = pageMetadata("Ish tajribasi", "ASOS IT'da penetration testing va QA; mustaqil xavfsizlik tadqiqoti va HAAD ta'lim dasturi.", "/experience");
+export default function Page() { return <Experience page />; }

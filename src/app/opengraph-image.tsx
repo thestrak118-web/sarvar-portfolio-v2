@@ -15,33 +15,33 @@ export default function OpengraphImage() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          background: "#050505",
+          background: "#070907",
           padding: "72px",
-          color: "#ecedea",
+          color: "#F2F5F1",
           fontFamily: "sans-serif",
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-          <div style={{ width: 10, height: 10, borderRadius: 99, background: "#c3ff3e" }} />
-          <div style={{ fontSize: 22, letterSpacing: 4, color: "#c3ff3e" }}>
-            {profile.availability.toUpperCase()}
+          <div style={{ width: 10, height: 10, borderRadius: 99, background: "#B7FF3C" }} />
+          <div style={{ fontSize: 22, letterSpacing: 0, color: "#B7FF3C" }}>
+            OFFENSIVE SECURITY / TOSHKENT
           </div>
         </div>
 
         <div style={{ display: "flex", flexDirection: "column" }}>
-          <div style={{ fontSize: 76, fontWeight: 700, letterSpacing: -3, lineHeight: 1.05 }}>
-            {profile.headline[0]}
+          <div style={{ fontSize: 76, fontWeight: 700, letterSpacing: 0, lineHeight: 1.05 }}>
+            Zaiflikni topaman.
           </div>
           <div
             style={{
               fontSize: 76,
               fontWeight: 700,
-              letterSpacing: -3,
+              letterSpacing: 0,
               lineHeight: 1.05,
-              color: "#8d918d",
+              color: "#B7FF3C",
             }}
           >
-            {profile.headline[1]}
+            Ta’sirini isbotlayman.
           </div>
         </div>
 
@@ -51,9 +51,9 @@ export default function OpengraphImage() {
             <div style={{ fontSize: 24, color: "#8d918d" }}>{profile.roleLine}</div>
           </div>
           <div style={{ display: "flex", gap: 40, fontSize: 22, color: "#8d918d" }}>
-            <div style={{ display: "flex" }}>6 MONTHS</div>
-            <div style={{ display: "flex" }}>20+ MACHINES</div>
-            <div style={{ display: "flex" }}>HTB CJCA</div>
+            <div style={{ display: "flex" }}>10+ LOYIHA</div>
+            <div style={{ display: "flex" }}>20+ LAB</div>
+            <div style={{ display: "flex" }}>HAAD RED-0</div>
           </div>
         </div>
       </div>

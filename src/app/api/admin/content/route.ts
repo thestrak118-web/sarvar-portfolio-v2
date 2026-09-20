@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { promises as fs } from "node:fs";
 import path from "node:path";
+import { CONTENT_FILES, contentDir, readAllContent } from "@/lib/admin-content";
 
 /**
  * Local content API for the admin panel.
@@ -9,34 +10,9 @@ import path from "node:path";
  * deployed site has no write endpoint at all.
  */
 
-export const CONTENT_FILES = [
-  "layout",
-  "profile",
-  "links",
-  "experience",
-  "projects",
-  "skills",
-  "certifications",
-  "research",
-  "github",
-] as const;
-
-export type ContentFile = (typeof CONTENT_FILES)[number];
-
-const contentDir = path.join(process.cwd(), "src", "content");
 const backupDir = path.join(contentDir, ".backups");
 
 const isDev = () => process.env.NODE_ENV === "development";
-
-export async function readAllContent(): Promise<Record<string, unknown>> {
-  const entries = await Promise.all(
-    CONTENT_FILES.map(async (file) => {
-      const raw = await fs.readFile(path.join(contentDir, `${file}.json`), "utf8");
-      return [file, JSON.parse(raw)] as const;
-    }),
-  );
-  return Object.fromEntries(entries);
-}
 
 export async function GET() {
   if (!isDev()) return new NextResponse("Not found", { status: 404 });

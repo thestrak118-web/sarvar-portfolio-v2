@@ -1,31 +1,18 @@
 import { notFound } from "next/navigation";
-import type { Metadata } from "next";
-import { projects, getProject } from "@/data/projects";
-import { CaseStudy } from "@/components/case-study/CaseStudy";
-
-export function generateStaticParams() {
-  return projects.map((project) => ({ slug: project.slug }));
-}
-
-export async function generateMetadata({ params }: PageProps<"/work/[slug]">): Promise<Metadata> {
+import { allStudies, getStudy } from "@/data/case-studies";
+import { CaseStudy } from "@/components/portfolio/Portfolio";
+import { pageMetadata, siteUrl } from "@/lib/site-metadata";
+export function generateStaticParams() { return allStudies.map(study => ({ slug: study.slug })); }
+export async function generateMetadata({ params }: PageProps<"/work/[slug]">) {
   const { slug } = await params;
-  const project = getProject(slug);
-  if (!project) return { title: "Case study not found" };
-  return {
-    title: project.title,
-    description: project.summary,
-    openGraph: { title: project.title, description: project.summary },
-  };
+  const study = getStudy(slug);
+  if (!study) return { title: "Loyiha topilmadi" };
+  return pageMetadata(study.title, study.summary, `/work/${study.slug}`);
 }
-
-export default async function CaseStudyPage({ params }: PageProps<"/work/[slug]">) {
+export default async function CasePage({ params }: PageProps<"/work/[slug]">) {
   const { slug } = await params;
-  const project = getProject(slug);
-  if (!project) notFound();
-
-  const index = projects.findIndex((p) => p.slug === project.slug);
-  const prev = projects[(index - 1 + projects.length) % projects.length];
-  const next = projects[(index + 1) % projects.length];
-
-  return <CaseStudy project={project} prev={prev} next={next} />;
+  const study = getStudy(slug);
+  if (!study) notFound();
+  const schema = { "@context": "https://schema.org", "@type": "CreativeWork", name: study.title, description: study.summary, url: `${siteUrl}/work/${study.slug}`, author: { "@type": "Person", name: "Sarvar Tolipov", url: siteUrl }, inLanguage: "uz" };
+  return <><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, "\\u003c") }} /><CaseStudy study={study} /></>;
 }
