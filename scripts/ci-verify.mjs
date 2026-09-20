@@ -2,6 +2,7 @@ import { spawn } from "node:child_process";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { chromium } from "playwright";
 import lighthouse from "lighthouse";
+import desktopConfig from "lighthouse/core/config/desktop-config.js";
 import { launch } from "chrome-launcher";
 
 const output = new URL("../qa-results/", import.meta.url).pathname;
@@ -47,17 +48,23 @@ try {
       chromeFlags: ["--headless", "--no-sandbox"],
     });
     try {
-      const result = await lighthouse("http://127.0.0.1:4174", {
-        port: chrome.port,
-        output: "json",
-        onlyCategories: [
-          "performance",
-          "accessibility",
-          "best-practices",
-          "seo",
-        ],
-        ...(mode === "desktop" ? { preset: "desktop" } : {}),
-      });
+      const result = await lighthouse(
+        "http://127.0.0.1:4174",
+        {
+          port: chrome.port,
+          output: "json",
+          onlyCategories: [
+            "performance",
+            "accessibility",
+            "best-practices",
+            "seo",
+          ],
+        },
+        mode === "desktop" ? desktopConfig : undefined,
+      );
+      if (result.lhr.configSettings.formFactor !== mode) {
+        throw new Error(`Unexpected Lighthouse form factor for ${mode}`);
+      }
       await writeFile(`${output}/lighthouse-${mode}.json`, result.report);
       const scores = Object.fromEntries(
         Object.entries(result.lhr.categories).map(([key, value]) => [
